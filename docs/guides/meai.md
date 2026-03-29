@@ -1,7 +1,9 @@
 # Microsoft.Extensions.AI Integration
 
-PredictionGuard provides `AIFunction` tool wrappers for its unique guardrail endpoints,
-making them usable with any `Microsoft.Extensions.AI.IChatClient`.
+!!! tip "Cross-SDK comparison"
+    See the [centralized MEAI documentation](https://tryagi.github.io/docs/meai/) for feature matrices and comparisons across all tryAGI SDKs.
+
+The PredictionGuard SDK provides `AIFunction` tool wrappers compatible with [Microsoft.Extensions.AI](https://learn.microsoft.com/en-us/dotnet/ai/microsoft-extensions-ai). These tools can be used with any `IChatClient` to give AI models factuality checking, toxicity detection, PII detection, and prompt injection detection capabilities.
 
 ## Available Tools
 
