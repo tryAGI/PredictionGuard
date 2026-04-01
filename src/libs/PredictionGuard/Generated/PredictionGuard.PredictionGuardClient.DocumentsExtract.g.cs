@@ -430,7 +430,6 @@ namespace PredictionGuard
             bool? enableOCR = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::PredictionGuard.DocumentsExtractRequest
             {
                 File = file,

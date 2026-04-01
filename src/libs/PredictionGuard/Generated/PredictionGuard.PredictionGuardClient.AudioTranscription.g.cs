@@ -448,7 +448,6 @@ namespace PredictionGuard
             string? responseFormat = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::PredictionGuard.AudioTranscriptionRequest
             {
                 Model = model,
