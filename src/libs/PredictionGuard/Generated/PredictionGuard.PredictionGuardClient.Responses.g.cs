@@ -317,6 +317,7 @@ namespace PredictionGuard
             global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaSafeguards? safeguards = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::PredictionGuard.ResponsesRequest
             {
                 Model = model,

@@ -271,6 +271,7 @@ namespace PredictionGuard
             bool detect,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::PredictionGuard.InjectionRequest
             {
                 Prompt = prompt,

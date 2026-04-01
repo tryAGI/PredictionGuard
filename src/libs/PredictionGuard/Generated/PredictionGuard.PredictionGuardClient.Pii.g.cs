@@ -279,6 +279,7 @@ namespace PredictionGuard
             global::System.Collections.Generic.IList<string>? entityList = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::PredictionGuard.PiiRequest
             {
                 Prompt = prompt,
