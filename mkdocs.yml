@@ -1,7 +1,10 @@
 site_name: PredictionGuard .NET Documentation
 nav:
 - Overview: index.md
+- Guides:
+  - Microsoft.Extensions.AI: guides/meai.md
 # EXAMPLES:START
+
 # EXAMPLES:END
         
 theme:
