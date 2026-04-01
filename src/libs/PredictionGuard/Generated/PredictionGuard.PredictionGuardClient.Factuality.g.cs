@@ -273,7 +273,6 @@ namespace PredictionGuard
             string text,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::PredictionGuard.FactualityRequest
             {
                 Reference = reference,

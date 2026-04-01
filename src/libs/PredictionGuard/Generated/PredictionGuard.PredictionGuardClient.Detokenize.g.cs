@@ -273,7 +273,6 @@ namespace PredictionGuard
             global::System.Collections.Generic.IList<int> tokens,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::PredictionGuard.DetokenizeRequest
             {
                 Model = model,
