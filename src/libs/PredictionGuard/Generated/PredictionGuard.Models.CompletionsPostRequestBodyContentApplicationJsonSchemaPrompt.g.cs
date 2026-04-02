@@ -13,35 +13,35 @@ namespace PredictionGuard
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public string? Value1 { get; init; }
+        public string? CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 { get; init; }
 #else
-        public string? Value1 { get; }
+        public string? CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 => CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.IList<string>? Value2 { get; init; }
+        public global::System.Collections.Generic.IList<string>? CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 { get; init; }
 #else
-        public global::System.Collections.Generic.IList<string>? Value2 { get; }
+        public global::System.Collections.Generic.IList<string>? CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 => CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -50,42 +50,42 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator string?(CompletionsPostRequestBodyContentApplicationJsonSchemaPrompt @this) => @this.Value1;
+        public static implicit operator string?(CompletionsPostRequestBodyContentApplicationJsonSchemaPrompt @this) => @this.CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1;
 
         /// <summary>
         /// 
         /// </summary>
         public CompletionsPostRequestBodyContentApplicationJsonSchemaPrompt(string? value)
         {
-            Value1 = value;
+            CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public CompletionsPostRequestBodyContentApplicationJsonSchemaPrompt(
-            string? value1,
-            global::System.Collections.Generic.IList<string>? value2
+            string? completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1,
+            global::System.Collections.Generic.IList<string>? completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2
             )
         {
-            Value1 = value1;
-            Value2 = value2;
+            CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 = completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1;
+            CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 = completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value2 as object ??
-            Value1 as object 
+            CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 as object ??
+            CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() 
+            CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1?.ToString() ??
+            CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2?.ToString() 
             ;
 
         /// <summary>
@@ -93,15 +93,15 @@ namespace PredictionGuard
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && !IsValue2 || !IsValue1 && IsValue2;
+            return IsCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 && !IsCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 || !IsCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 && IsCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? value1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<string>?, TResult>? value2 = null,
+            global::System.Func<string?, TResult>? completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<string>?, TResult>? completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -109,13 +109,13 @@ namespace PredictionGuard
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 && completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 != null)
             {
-                return value1(Value1!);
+                return completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1(CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 && completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 != null)
             {
-                return value2(Value2!);
+                return completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2(CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2!);
             }
 
             return default(TResult);
@@ -125,8 +125,8 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? value1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<string>?>? value2 = null,
+            global::System.Action<string?>? completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<string>?>? completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -134,13 +134,13 @@ namespace PredictionGuard
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1)
             {
-                value1?.Invoke(Value1!);
+                completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1?.Invoke(CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1!);
             }
-            else if (IsValue2)
+            else if (IsCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2)
             {
-                value2?.Invoke(Value2!);
+                completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2?.Invoke(CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2!);
             }
         }
 
@@ -151,9 +151,9 @@ namespace PredictionGuard
         {
             var fields = new object?[]
             {
-                Value1,
+                CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1,
                 typeof(string),
-                Value2,
+                CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2,
                 typeof(global::System.Collections.Generic.IList<string>),
             };
             const int offset = unchecked((int)2166136261);
@@ -171,8 +171,8 @@ namespace PredictionGuard
         public bool Equals(CompletionsPostRequestBodyContentApplicationJsonSchemaPrompt other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<string>?>.Default.Equals(Value2, other.Value2) 
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1, other.CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<string>?>.Default.Equals(CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2, other.CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2) 
                 ;
         }
 

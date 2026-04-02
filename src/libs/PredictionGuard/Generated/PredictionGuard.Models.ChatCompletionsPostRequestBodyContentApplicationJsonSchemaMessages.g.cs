@@ -13,18 +13,18 @@ namespace PredictionGuard
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public string? Value1 { get; init; }
+        public string? ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1 { get; init; }
 #else
-        public string? Value1 { get; }
+        public string? ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1 => ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1 != null;
 
         /// <summary>
         /// An array of messages used for generating completions.
@@ -50,25 +50,25 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator string?(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages @this) => @this.Value1;
+        public static implicit operator string?(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages @this) => @this.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1;
 
         /// <summary>
         /// 
         /// </summary>
         public ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages(string? value)
         {
-            Value1 = value;
+            ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1 = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages(
-            string? value1,
+            string? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1,
             global::System.Collections.Generic.IList<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1Items>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1
             )
         {
-            Value1 = value1;
+            ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1 = chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1;
             ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1 = chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1;
         }
 
@@ -77,14 +77,14 @@ namespace PredictionGuard
         /// </summary>
         public object? Object =>
             ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1 as object ??
-            Value1 as object 
+            ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1 as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
+            ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1?.ToString() ??
             ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1?.ToString() 
             ;
 
@@ -93,14 +93,14 @@ namespace PredictionGuard
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && !IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1 || !IsValue1 && IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1;
+            return IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1 && !IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1 || !IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1 && IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? value1 = null,
+            global::System.Func<string?, TResult>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1 = null,
             global::System.Func<global::System.Collections.Generic.IList<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1Items>?, TResult>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1 = null,
             bool validate = true)
         {
@@ -109,9 +109,9 @@ namespace PredictionGuard
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1 && chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1 != null)
             {
-                return value1(Value1!);
+                return chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1!);
             }
             else if (IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1 && chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1 != null)
             {
@@ -125,7 +125,7 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? value1 = null,
+            global::System.Action<string?>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1 = null,
             global::System.Action<global::System.Collections.Generic.IList<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1Items>?>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1 = null,
             bool validate = true)
         {
@@ -134,9 +134,9 @@ namespace PredictionGuard
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1)
             {
-                value1?.Invoke(Value1!);
+                chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1?.Invoke(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1!);
             }
             else if (IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1)
             {
@@ -151,7 +151,7 @@ namespace PredictionGuard
         {
             var fields = new object?[]
             {
-                Value1,
+                ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1,
                 typeof(string),
                 ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1,
                 typeof(global::System.Collections.Generic.IList<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1Items>),
@@ -171,7 +171,7 @@ namespace PredictionGuard
         public bool Equals(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(Value1, other.Value1) &&
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1, other.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1) &&
                 global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1Items>?>.Default.Equals(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1, other.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1) 
                 ;
         }

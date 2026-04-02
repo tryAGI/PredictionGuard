@@ -13,18 +13,18 @@ namespace PredictionGuard
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public string? Value1 { get; init; }
+        public string? ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1 { get; init; }
 #else
-        public string? Value1 { get; }
+        public string? ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1 => ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1 != null;
 
         /// <summary>
         /// The content of the message, used for file inputs.
@@ -50,25 +50,25 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator string?(ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent @this) => @this.Value1;
+        public static implicit operator string?(ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent @this) => @this.ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1;
 
         /// <summary>
         /// 
         /// </summary>
         public ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent(string? value)
         {
-            Value1 = value;
+            ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1 = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent(
-            string? value1,
+            string? responsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1,
             global::System.Collections.Generic.IList<global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentOneOf1Items>? responsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1
             )
         {
-            Value1 = value1;
+            ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1 = responsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1;
             ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1 = responsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1;
         }
 
@@ -77,14 +77,14 @@ namespace PredictionGuard
         /// </summary>
         public object? Object =>
             ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1 as object ??
-            Value1 as object 
+            ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1 as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
+            ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1?.ToString() ??
             ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1?.ToString() 
             ;
 
@@ -93,14 +93,14 @@ namespace PredictionGuard
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && !IsResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1 || !IsValue1 && IsResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1;
+            return IsResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1 && !IsResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1 || !IsResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1 && IsResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? value1 = null,
+            global::System.Func<string?, TResult>? responsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1 = null,
             global::System.Func<global::System.Collections.Generic.IList<global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentOneOf1Items>?, TResult>? responsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1 = null,
             bool validate = true)
         {
@@ -109,9 +109,9 @@ namespace PredictionGuard
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1 && responsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1 != null)
             {
-                return value1(Value1!);
+                return responsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1(ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1!);
             }
             else if (IsResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1 && responsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1 != null)
             {
@@ -125,7 +125,7 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? value1 = null,
+            global::System.Action<string?>? responsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1 = null,
             global::System.Action<global::System.Collections.Generic.IList<global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentOneOf1Items>?>? responsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1 = null,
             bool validate = true)
         {
@@ -134,9 +134,9 @@ namespace PredictionGuard
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1)
             {
-                value1?.Invoke(Value1!);
+                responsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1?.Invoke(ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1!);
             }
             else if (IsResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1)
             {
@@ -151,7 +151,7 @@ namespace PredictionGuard
         {
             var fields = new object?[]
             {
-                Value1,
+                ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1,
                 typeof(string),
                 ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1,
                 typeof(global::System.Collections.Generic.IList<global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentOneOf1Items>),
@@ -171,7 +171,7 @@ namespace PredictionGuard
         public bool Equals(ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(Value1, other.Value1) &&
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1, other.ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1) &&
                 global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentOneOf1Items>?>.Default.Equals(ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1, other.ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1) 
                 ;
         }
