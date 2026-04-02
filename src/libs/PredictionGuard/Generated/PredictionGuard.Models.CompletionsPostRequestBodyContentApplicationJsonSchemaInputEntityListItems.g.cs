@@ -13,18 +13,18 @@ namespace PredictionGuard
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public string? Value1 { get; init; }
+        public string? CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 { get; init; }
 #else
-        public string? Value1 { get; }
+        public string? CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 => CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -33,28 +33,28 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator string?(CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItems @this) => @this.Value1;
+        public static implicit operator string?(CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItems @this) => @this.CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1;
 
         /// <summary>
         /// 
         /// </summary>
         public CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItems(string? value)
         {
-            Value1 = value;
+            CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value1 as object 
+            CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() 
+            CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1?.ToString() 
             ;
 
         /// <summary>
@@ -62,14 +62,14 @@ namespace PredictionGuard
         /// </summary>
         public bool Validate()
         {
-            return IsValue1;
+            return IsCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? value1 = null,
+            global::System.Func<string?, TResult>? completionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 = null,
             bool validate = true)
         {
             if (validate)
@@ -77,9 +77,9 @@ namespace PredictionGuard
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 && completionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 != null)
             {
-                return value1(Value1!);
+                return completionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1(CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1!);
             }
 
             return default(TResult);
@@ -89,7 +89,7 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? value1 = null,
+            global::System.Action<string?>? completionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 = null,
             bool validate = true)
         {
             if (validate)
@@ -97,9 +97,9 @@ namespace PredictionGuard
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1)
             {
-                value1?.Invoke(Value1!);
+                completionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1?.Invoke(CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1!);
             }
         }
 
@@ -110,7 +110,7 @@ namespace PredictionGuard
         {
             var fields = new object?[]
             {
-                Value1,
+                CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1,
                 typeof(string),
             };
             const int offset = unchecked((int)2166136261);
@@ -128,7 +128,7 @@ namespace PredictionGuard
         public bool Equals(CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItems other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(Value1, other.Value1) 
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1, other.CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1) 
                 ;
         }
 

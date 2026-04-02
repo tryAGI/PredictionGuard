@@ -42,7 +42,7 @@ namespace PredictionGuard.JsonConverters
             var __bestIndex = -1;
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
 
-            string? value1 = default;
+            string? responsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1 = default;
             if (__bestIndex >= 0)
             {
                 if (__bestIndex == 0)
@@ -52,7 +52,7 @@ namespace PredictionGuard.JsonConverters
 
                         var typeInfo = typeInfoResolver.GetTypeInfo(typeof(string), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<string> ??
                                        throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(string).Name}");
-                        value1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        responsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -63,14 +63,14 @@ namespace PredictionGuard.JsonConverters
                 }
             }
 
-            if (value1 == null)
+            if (responsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1 == null)
             {
                 try
                 {
 
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(string), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<string> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(string).Name}");
-                    value1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    responsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -81,7 +81,7 @@ namespace PredictionGuard.JsonConverters
             }
 
             var __value = new global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItems(
-                value1
+                responsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1
                 );
 
             return __value;
@@ -96,11 +96,11 @@ namespace PredictionGuard.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            if (value.IsValue1)
+            if (value.IsResponsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(string), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<string?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(string).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value1!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ResponsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1!, typeInfo);
             }
         }
     }
