@@ -5,6 +5,25 @@ namespace PredictionGuard
 {
     public partial class PredictionGuardClient
     {
+
+
+        private static readonly global::PredictionGuard.EndPointSecurityRequirement s_McpServersSecurityRequirement0 =
+            new global::PredictionGuard.EndPointSecurityRequirement
+            {
+                Authorizations = new global::PredictionGuard.EndPointAuthorizationRequirement[]
+                {                    new global::PredictionGuard.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::PredictionGuard.EndPointSecurityRequirement[] s_McpServersSecurityRequirements =
+            new global::PredictionGuard.EndPointSecurityRequirement[]
+            {                s_McpServersSecurityRequirement0,
+            };
         partial void PrepareMcpServersArguments(
             global::System.Net.Http.HttpClient httpClient);
         partial void PrepareMcpServersRequest(
@@ -33,9 +52,15 @@ namespace PredictionGuard
             PrepareMcpServersArguments(
                 httpClient: HttpClient);
 
+
+            var __authorizations = global::PredictionGuard.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_McpServersSecurityRequirements,
+                operationName: "McpServersAsync");
+
             var __pathBuilder = new global::PredictionGuard.PathBuilder(
                 path: "/mcp_servers",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -45,7 +70,7 @@ namespace PredictionGuard
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
