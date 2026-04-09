@@ -12,7 +12,7 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
-        public const string DefaultBaseUrl = "https://api.predictionguard.com";
+        public const string DefaultBaseUrl = "https://api.predictionguard.com/";
 
         private bool _disposeHttpClient = true;
 

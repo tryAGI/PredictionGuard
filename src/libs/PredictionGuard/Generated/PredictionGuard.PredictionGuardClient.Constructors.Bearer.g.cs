@@ -6,6 +6,7 @@ namespace PredictionGuard
     public sealed partial class PredictionGuardClient
     {
         /// <inheritdoc cref="PredictionGuardClient(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::PredictionGuard.EndPointAuthorization}?, bool)"/>
+
         public PredictionGuardClient(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,
