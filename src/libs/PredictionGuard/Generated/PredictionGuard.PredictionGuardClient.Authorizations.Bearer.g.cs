@@ -25,6 +25,7 @@ namespace PredictionGuard
             Authorizations.Add(new global::PredictionGuard.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "BearerAuth",
                 Location = "Header",
                 Name = "Bearer",
                 Value = apiKey,

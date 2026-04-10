@@ -14,6 +14,7 @@ namespace PredictionGuard
         /// <param name="entityList"></param>
         /// <param name="injection"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::PredictionGuard.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::PredictionGuard.AudioTranscriptionResponse200> AudioTranscriptionAsync(
@@ -24,6 +25,7 @@ namespace PredictionGuard
             string? replaceMethod = default,
             global::System.Collections.Generic.IList<string>? entityList = default,
             bool? injection = default,
+            global::PredictionGuard.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Audio Transcription<br/>
@@ -61,6 +63,7 @@ namespace PredictionGuard
         /// <param name="responseFormat">
         /// The format for the response object. Defaults to "json" and must be set to "verbose_json" when using diarization or timestamp granularities.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::PredictionGuard.AudioTranscriptionResponse200> AudioTranscriptionAsync(
@@ -78,6 +81,7 @@ namespace PredictionGuard
             global::PredictionGuard.AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularities? timestampsGranularities = default,
             bool? diarization = default,
             string? responseFormat = default,
+            global::PredictionGuard.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
