@@ -143,26 +143,26 @@ namespace PredictionGuard
                 } 
             }
 
-                if (toxicity != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("Toxicity", toxicity.ToString());
-                }
-                if (pii != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("Pii", pii.ToString());
-                }
-                if (replaceMethod != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("Replace-Method", replaceMethod.ToString());
-                }
-                if (entityList != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("Entity-List", entityList.ToString());
-                }
-                if (injection != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("Injection", injection.ToString());
-                }
+            if (toxicity != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("Toxicity", toxicity.ToString());
+            }
+            if (pii != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("Pii", pii.ToString());
+            }
+            if (replaceMethod != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("Replace-Method", replaceMethod.ToString());
+            }
+            if (entityList != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("Entity-List", entityList.ToString());
+            }
+            if (injection != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("Injection", injection.ToString());
+            }
 
                             var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
                             if (toxicity != default)
