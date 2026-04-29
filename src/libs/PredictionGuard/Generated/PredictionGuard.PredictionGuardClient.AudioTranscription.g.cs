@@ -169,21 +169,21 @@ namespace PredictionGuard
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{toxicity}"),
+                                    content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(toxicity, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
                                     name: "\"Toxicity\"");
                             } 
                             if (pii != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{pii}"),
+                                    content: new global::System.Net.Http.StringContent(pii ?? string.Empty),
                                     name: "\"Pii\"");
                             } 
                             if (replaceMethod != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{replaceMethod}"),
+                                    content: new global::System.Net.Http.StringContent(replaceMethod ?? string.Empty),
                                     name: "\"Replace-Method\"");
                             } 
                             if (entityList != default)
@@ -197,13 +197,41 @@ namespace PredictionGuard
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{injection}"),
+                                    content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(injection, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
                                     name: "\"Injection\"");
                             }
                             __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent($"{request.Model}"),
+                                content: new global::System.Net.Http.StringContent(request.Model ?? string.Empty),
                                 name: "\"model\"");
                             var __contentFile = new global::System.Net.Http.ByteArrayContent(request.File ?? global::System.Array.Empty<byte>());
+                            __contentFile.Headers.ContentType = new global::System.Net.Http.Headers.MediaTypeHeaderValue(
+                                request.Filename is null
+                                    ? "application/octet-stream"
+                                    : (global::System.IO.Path.GetExtension(request.Filename) ?? string.Empty).ToLowerInvariant() switch
+                                    {
+                                        ".aac" => "audio/aac",
+                                        ".flac" => "audio/flac",
+                                        ".gif" => "image/gif",
+                                        ".jpeg" => "image/jpeg",
+                                        ".jpg" => "image/jpeg",
+                                        ".json" => "application/json",
+                                        ".m4a" => "audio/mp4",
+                                        ".mp3" => "audio/mpeg",
+                                        ".mp4" => "video/mp4",
+                                        ".mpeg" => "audio/mpeg",
+                                        ".mpga" => "audio/mpeg",
+                                        ".oga" => "audio/ogg",
+                                        ".ogg" => "audio/ogg",
+                                        ".opus" => "audio/ogg",
+                                        ".pdf" => "application/pdf",
+                                        ".png" => "image/png",
+                                        ".txt" => "text/plain",
+                                        ".wav" => "audio/wav",
+                                        ".weba" => "audio/webm",
+                                        ".webm" => "video/webm",
+                                        ".webp" => "image/webp",
+                                        _ => "application/octet-stream",
+                                    });
                             __httpRequestContent.Add(
                                 content: __contentFile,
                                 name: "\"file\"",
@@ -216,42 +244,42 @@ namespace PredictionGuard
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.Language}"),
+                                    content: new global::System.Net.Http.StringContent(request.Language ?? string.Empty),
                                     name: "\"language\"");
                             } 
                             if (request.Prompt != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.Prompt}"),
+                                    content: new global::System.Net.Http.StringContent(request.Prompt ?? string.Empty),
                                     name: "\"prompt\"");
                             } 
                             if (request.Temperature != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.Temperature}"),
+                                    content: new global::System.Net.Http.StringContent(global::System.Convert.ToString(request.Temperature, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty),
                                     name: "\"temperature\"");
                             } 
                             if (request.TimestampsGranularities != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent(request.TimestampsGranularities?.ToString() ?? string.Empty),
+                                    content: new global::System.Net.Http.StringContent(request.TimestampsGranularities.ToString() ?? string.Empty),
                                     name: "\"timestamps_granularities[]\"");
                             } 
                             if (request.Diarization != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.Diarization}"),
+                                    content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(request.Diarization, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
                                     name: "\"diarization\"");
                             } 
                             if (request.ResponseFormat != default)
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.ResponseFormat}"),
+                                    content: new global::System.Net.Http.StringContent(request.ResponseFormat ?? string.Empty),
                                     name: "\"response_format\"");
                             }
                             __httpRequest.Content = __httpRequestContent;
