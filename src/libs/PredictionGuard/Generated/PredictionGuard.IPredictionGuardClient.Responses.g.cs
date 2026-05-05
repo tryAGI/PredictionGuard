@@ -21,6 +21,19 @@ namespace PredictionGuard
         /// Responses<br/>
         /// Generate responses while also allowing for the utilization of various tools.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::PredictionGuard.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.ResponsesResponse200>> ResponsesAsResponseAsync(
+
+            global::PredictionGuard.ResponsesRequest request,
+            global::PredictionGuard.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Responses<br/>
+        /// Generate responses while also allowing for the utilization of various tools.
+        /// </summary>
         /// <param name="model">
         /// The AI model to use for generating responses.
         /// </param>
