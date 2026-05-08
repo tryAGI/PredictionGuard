@@ -27,6 +27,19 @@ namespace PredictionGuard
         public bool IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentVariant1 => ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentVariant1 != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentVariant1;
+            return IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentVariant1;
+        }
+
+        /// <summary>
         /// The content of the message, used for file inputs.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -42,6 +55,19 @@ namespace PredictionGuard
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContent1))]
 #endif
         public bool IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContent1 => ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContent1 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContent1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentOneOf1Items>? value)
+        {
+            value = ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContent1;
+            return IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContent1;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -100,8 +126,8 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentVariant1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentOneOf1Items>?, TResult>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContent1 = null,
+            global::System.Func<string, TResult>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentOneOf1Items>, TResult>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContent1 = null,
             bool validate = true)
         {
             if (validate)
@@ -125,8 +151,32 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentVariant1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentOneOf1Items>?>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContent1 = null,
+            global::System.Action<string>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentVariant1 = null,
+
+            global::System.Action<global::System.Collections.Generic.IList<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentOneOf1Items>>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContent1 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentVariant1)
+            {
+                chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentVariant1?.Invoke(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentVariant1!);
+            }
+            else if (IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContent1)
+            {
+                chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContent1?.Invoke(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContent1!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContentOneOf1Items>>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1ItemsContent1 = null,
             bool validate = true)
         {
             if (validate)

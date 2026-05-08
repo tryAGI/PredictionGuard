@@ -29,6 +29,19 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1;
+            return IsCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<string>? CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace PredictionGuard
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2))]
 #endif
         public bool IsCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 => CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<string>? value)
+        {
+            value = CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2;
+            return IsCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -100,8 +126,8 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<string>?, TResult>? completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 = null,
+            global::System.Func<string, TResult>? completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<string>, TResult>? completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -125,8 +151,32 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<string>?>? completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 = null,
+            global::System.Action<string>? completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 = null,
+
+            global::System.Action<global::System.Collections.Generic.IList<string>>? completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1)
+            {
+                completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1?.Invoke(CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1!);
+            }
+            else if (IsCompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2)
+            {
+                completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2?.Invoke(CompletionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<string>>? completionsPostRequestBodyContentApplicationJsonSchemaPromptVariant2 = null,
             bool validate = true)
         {
             if (validate)
