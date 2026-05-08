@@ -25,6 +25,19 @@ namespace PredictionGuard
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1))]
 #endif
         public bool IsResponsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1 => ResponsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = ResponsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1;
+            return IsResponsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -69,7 +82,7 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? responsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1 = null,
+            global::System.Func<string, TResult>? responsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1 = null,
             bool validate = true)
         {
             if (validate)
@@ -89,7 +102,25 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? responsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1 = null,
+            global::System.Action<string>? responsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsResponsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1)
+            {
+                responsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1?.Invoke(ResponsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? responsesPostRequestBodyContentApplicationJsonSchemaSafeguardsEntityListItemsVariant1 = null,
             bool validate = true)
         {
             if (validate)

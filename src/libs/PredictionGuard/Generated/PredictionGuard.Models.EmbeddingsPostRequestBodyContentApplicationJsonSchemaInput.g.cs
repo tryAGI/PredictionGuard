@@ -27,6 +27,19 @@ namespace PredictionGuard
         public bool IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputVariant1 => EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputVariant1 != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputVariant1;
+            return IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputVariant1;
+        }
+
+        /// <summary>
         /// An array of strings or objects containing the text and/or images to be embedded.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -42,6 +55,19 @@ namespace PredictionGuard
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(EmbeddingsPostRequestBodyContentApplicationJsonSchemaInput1))]
 #endif
         public bool IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInput1 => EmbeddingsPostRequestBodyContentApplicationJsonSchemaInput1 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickEmbeddingsPostRequestBodyContentApplicationJsonSchemaInput1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items>? value)
+        {
+            value = EmbeddingsPostRequestBodyContentApplicationJsonSchemaInput1;
+            return IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInput1;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -100,8 +126,8 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputVariant1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items>?, TResult>? embeddingsPostRequestBodyContentApplicationJsonSchemaInput1 = null,
+            global::System.Func<string, TResult>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items>, TResult>? embeddingsPostRequestBodyContentApplicationJsonSchemaInput1 = null,
             bool validate = true)
         {
             if (validate)
@@ -125,8 +151,32 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputVariant1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items>?>? embeddingsPostRequestBodyContentApplicationJsonSchemaInput1 = null,
+            global::System.Action<string>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputVariant1 = null,
+
+            global::System.Action<global::System.Collections.Generic.IList<global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items>>? embeddingsPostRequestBodyContentApplicationJsonSchemaInput1 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputVariant1)
+            {
+                embeddingsPostRequestBodyContentApplicationJsonSchemaInputVariant1?.Invoke(EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputVariant1!);
+            }
+            else if (IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInput1)
+            {
+                embeddingsPostRequestBodyContentApplicationJsonSchemaInput1?.Invoke(EmbeddingsPostRequestBodyContentApplicationJsonSchemaInput1!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items>>? embeddingsPostRequestBodyContentApplicationJsonSchemaInput1 = null,
             bool validate = true)
         {
             if (validate)

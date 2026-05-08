@@ -25,6 +25,19 @@ namespace PredictionGuard
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1))]
 #endif
         public bool IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 => ChatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickChatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = ChatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1;
+            return IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -69,7 +82,7 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 = null,
+            global::System.Func<string, TResult>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 = null,
             bool validate = true)
         {
             if (validate)
@@ -89,7 +102,25 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 = null,
+            global::System.Action<string>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1)
+            {
+                chatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1?.Invoke(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 = null,
             bool validate = true)
         {
             if (validate)

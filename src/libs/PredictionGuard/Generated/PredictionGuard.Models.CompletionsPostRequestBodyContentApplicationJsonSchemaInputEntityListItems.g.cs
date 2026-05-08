@@ -25,6 +25,19 @@ namespace PredictionGuard
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1))]
 #endif
         public bool IsCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 => CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1;
+            return IsCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -69,7 +82,7 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? completionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 = null,
+            global::System.Func<string, TResult>? completionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 = null,
             bool validate = true)
         {
             if (validate)
@@ -89,7 +102,25 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? completionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 = null,
+            global::System.Action<string>? completionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1)
+            {
+                completionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1?.Invoke(CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? completionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 = null,
             bool validate = true)
         {
             if (validate)
