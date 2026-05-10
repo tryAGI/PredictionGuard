@@ -89,6 +89,11 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public static ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages FromChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1(string? value) => new ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages(
             string? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesVariant1,
             global::System.Collections.Generic.IList<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1Items>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaMessages1

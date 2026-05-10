@@ -149,6 +149,11 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public static EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items FromEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1(string? value) => new EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items(int value) => new EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items((int?)value);
 
         /// <summary>
@@ -167,6 +172,11 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public static EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items FromEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2(int? value) => new EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items(global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3 value) => new EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items((global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3?)value);
 
         /// <summary>
@@ -181,6 +191,11 @@ namespace PredictionGuard
         {
             EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items FromEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3(global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3? value) => new EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items(value);
 
         /// <summary>
         /// 

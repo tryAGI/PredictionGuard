@@ -89,6 +89,11 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public static AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularities FromAudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1(string? value) => new AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularities(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularities(
             string? audioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1,
             global::System.Collections.Generic.IList<object>? audioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2

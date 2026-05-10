@@ -59,6 +59,11 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public static CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItems FromCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1(string? value) => new CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItems(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public object? Object =>
             CompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1 as object 
             ;
