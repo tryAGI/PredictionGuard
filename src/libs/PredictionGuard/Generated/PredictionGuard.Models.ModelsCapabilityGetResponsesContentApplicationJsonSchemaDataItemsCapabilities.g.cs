@@ -120,5 +120,6 @@ namespace PredictionGuard
         public ModelsCapabilityGetResponsesContentApplicationJsonSchemaDataItemsCapabilities()
         {
         }
+
     }
 }

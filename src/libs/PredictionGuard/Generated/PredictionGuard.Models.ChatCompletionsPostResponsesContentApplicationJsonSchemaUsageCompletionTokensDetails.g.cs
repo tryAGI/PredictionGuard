@@ -74,5 +74,6 @@ namespace PredictionGuard
         public ChatCompletionsPostResponsesContentApplicationJsonSchemaUsageCompletionTokensDetails()
         {
         }
+
     }
 }

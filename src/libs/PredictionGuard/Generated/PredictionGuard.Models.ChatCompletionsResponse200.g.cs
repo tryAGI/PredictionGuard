@@ -96,5 +96,6 @@ namespace PredictionGuard
         public ChatCompletionsResponse200()
         {
         }
+
     }
 }

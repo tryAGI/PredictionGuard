@@ -118,5 +118,6 @@ namespace PredictionGuard
         public ModelsCapabilityGetResponsesContentApplicationJsonSchemaDataItems()
         {
         }
+
     }
 }

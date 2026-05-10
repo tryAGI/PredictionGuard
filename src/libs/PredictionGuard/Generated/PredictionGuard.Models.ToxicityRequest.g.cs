@@ -42,5 +42,6 @@ namespace PredictionGuard
         public ToxicityRequest()
         {
         }
+
     }
 }

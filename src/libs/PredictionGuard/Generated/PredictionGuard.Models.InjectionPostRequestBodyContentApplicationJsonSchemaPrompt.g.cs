@@ -42,6 +42,13 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public string PickInjectionPostRequestBodyContentApplicationJsonSchemaPromptVariant1() => IsInjectionPostRequestBodyContentApplicationJsonSchemaPromptVariant1
+            ? InjectionPostRequestBodyContentApplicationJsonSchemaPromptVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'InjectionPostRequestBodyContentApplicationJsonSchemaPromptVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<string>? InjectionPostRequestBodyContentApplicationJsonSchemaPromptVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace PredictionGuard
             value = InjectionPostRequestBodyContentApplicationJsonSchemaPromptVariant2;
             return IsInjectionPostRequestBodyContentApplicationJsonSchemaPromptVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.IList<string> PickInjectionPostRequestBodyContentApplicationJsonSchemaPromptVariant2() => IsInjectionPostRequestBodyContentApplicationJsonSchemaPromptVariant2
+            ? InjectionPostRequestBodyContentApplicationJsonSchemaPromptVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'InjectionPostRequestBodyContentApplicationJsonSchemaPromptVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

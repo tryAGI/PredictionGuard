@@ -184,5 +184,6 @@ namespace PredictionGuard
         public CompletionsRequest()
         {
         }
+
     }
 }

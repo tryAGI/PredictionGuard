@@ -74,5 +74,6 @@ namespace PredictionGuard
         public ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentOneOf1Items()
         {
         }
+
     }
 }

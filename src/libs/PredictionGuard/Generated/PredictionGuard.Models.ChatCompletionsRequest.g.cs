@@ -238,5 +238,6 @@ namespace PredictionGuard
         public ChatCompletionsRequest()
         {
         }
+
     }
 }

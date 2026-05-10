@@ -77,5 +77,6 @@ namespace PredictionGuard
         public RerankRequest()
         {
         }
+
     }
 }

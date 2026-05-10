@@ -40,6 +40,13 @@ namespace PredictionGuard
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public string PickResponsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1() => IsResponsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1
+            ? ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1' but the value was {ToString()}.");
+
+        /// <summary>
         /// An object representing the tool to be chosen
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -68,6 +75,13 @@ namespace PredictionGuard
             value = ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1;
             return IsResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1 PickResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1() => IsResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1
+            ? ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

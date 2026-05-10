@@ -151,5 +151,6 @@ namespace PredictionGuard
         public ResponsesResponse200()
         {
         }
+
     }
 }
