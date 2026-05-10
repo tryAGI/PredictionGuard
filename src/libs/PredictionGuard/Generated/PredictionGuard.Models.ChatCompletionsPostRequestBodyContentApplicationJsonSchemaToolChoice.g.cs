@@ -89,6 +89,11 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public static ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice FromChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1(string? value) => new ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice(global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1 value) => new ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice((global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace PredictionGuard
         {
             ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice FromChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1(global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1? value) => new ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice(value);
 
         /// <summary>
         /// 

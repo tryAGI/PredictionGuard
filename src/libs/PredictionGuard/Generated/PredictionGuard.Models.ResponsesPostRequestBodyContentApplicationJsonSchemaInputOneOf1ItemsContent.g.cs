@@ -89,6 +89,11 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public static ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent FromResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1(string? value) => new ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent(
             string? responsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentVariant1,
             global::System.Collections.Generic.IList<global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContentOneOf1Items>? responsesPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsContent1

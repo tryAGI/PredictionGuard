@@ -89,6 +89,11 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public static ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStop FromChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1(string? value) => new ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStop(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStop(
             string? chatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1,
             global::System.Collections.Generic.IList<string>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2
