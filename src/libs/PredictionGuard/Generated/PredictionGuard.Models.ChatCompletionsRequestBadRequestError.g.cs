@@ -41,5 +41,6 @@ namespace PredictionGuard
         public ChatCompletionsRequestBadRequestError()
         {
         }
+
     }
 }

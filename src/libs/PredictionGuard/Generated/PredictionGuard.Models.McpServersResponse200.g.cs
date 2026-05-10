@@ -52,5 +52,6 @@ namespace PredictionGuard
         public McpServersResponse200()
         {
         }
+
     }
 }

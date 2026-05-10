@@ -42,6 +42,13 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public string PickPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant1() => IsPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant1
+            ? PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<string>? PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace PredictionGuard
             value = PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2;
             return IsPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.IList<string> PickPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2() => IsPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2
+            ? PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

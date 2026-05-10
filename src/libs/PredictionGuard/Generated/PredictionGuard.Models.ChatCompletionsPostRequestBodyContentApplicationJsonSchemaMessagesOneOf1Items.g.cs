@@ -53,5 +53,6 @@ namespace PredictionGuard
         public ChatCompletionsPostRequestBodyContentApplicationJsonSchemaMessagesOneOf1Items()
         {
         }
+
     }
 }

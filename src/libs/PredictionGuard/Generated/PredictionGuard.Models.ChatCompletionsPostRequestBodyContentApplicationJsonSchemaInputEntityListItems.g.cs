@@ -38,6 +38,13 @@ namespace PredictionGuard
             value = ChatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1;
             return IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PickChatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1() => IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1
+            ? ChatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ChatCompletionsPostRequestBodyContentApplicationJsonSchemaInputEntityListItemsVariant1' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

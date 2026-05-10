@@ -54,5 +54,6 @@ namespace PredictionGuard
         public FactualityRequest()
         {
         }
+
     }
 }

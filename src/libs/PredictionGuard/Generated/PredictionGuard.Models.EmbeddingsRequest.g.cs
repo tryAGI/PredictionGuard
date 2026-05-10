@@ -75,5 +75,6 @@ namespace PredictionGuard
         public EmbeddingsRequest()
         {
         }
+
     }
 }
