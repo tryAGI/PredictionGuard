@@ -108,7 +108,10 @@ namespace PredictionGuard.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (responsesPostRequestBodyContentApplicationJsonSchemaInputVariant1 == null && responsesPostRequestBodyContentApplicationJsonSchemaInput1 == null)
+            {
                 try
                 {
 

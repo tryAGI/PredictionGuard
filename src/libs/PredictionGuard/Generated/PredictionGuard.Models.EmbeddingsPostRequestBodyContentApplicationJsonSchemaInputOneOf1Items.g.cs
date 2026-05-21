@@ -29,6 +29,26 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1;
+            return IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PickEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1() => IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1
+            ? EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public int? EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2 { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace PredictionGuard
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2))]
 #endif
         public bool IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2 => EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out int? value)
+        {
+            value = EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2;
+            return IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public int PickEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2() => IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2
+            ? EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -61,6 +101,26 @@ namespace PredictionGuard
         public bool IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3 => EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3 != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<int>? value)
+        {
+            value = EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3;
+            return IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.IList<int> PickEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3() => IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3
+            ? EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3' but the value was {ToString()}.");
+
+        /// <summary>
         /// Use this option for multimodal input.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -76,6 +136,26 @@ namespace PredictionGuard
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3))]
 #endif
         public bool IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3 => EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3? value)
+        {
+            value = EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3;
+            return IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3 PickEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3() => IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3
+            ? EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -93,6 +173,11 @@ namespace PredictionGuard
         {
             EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items FromEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1(string? value) => new EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items(value);
 
         /// <summary>
         /// 
@@ -115,6 +200,11 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public static EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items FromEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2(int? value) => new EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items(global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3 value) => new EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items((global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3?)value);
 
         /// <summary>
@@ -129,6 +219,11 @@ namespace PredictionGuard
         {
             EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items FromEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3(global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3? value) => new EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items(value);
 
         /// <summary>
         /// 
@@ -178,10 +273,10 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1 = null,
+            global::System.Func<string, TResult>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1 = null,
             global::System.Func<int?, TResult>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2 = null,
-            global::System.Func<global::System.Collections.Generic.IList<int>?, TResult>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3 = null,
-            global::System.Func<global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3?, TResult>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3 = null,
+            global::System.Func<global::System.Collections.Generic.IList<int>, TResult>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3 = null,
+            global::System.Func<global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3, TResult>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3 = null,
             bool validate = true)
         {
             if (validate)
@@ -213,10 +308,46 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1 = null,
+            global::System.Action<string>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1 = null,
+
             global::System.Action<int?>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2 = null,
-            global::System.Action<global::System.Collections.Generic.IList<int>?>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3 = null,
-            global::System.Action<global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3?>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3 = null,
+
+            global::System.Action<global::System.Collections.Generic.IList<int>>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3 = null,
+
+            global::System.Action<global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1)
+            {
+                embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1?.Invoke(EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1!);
+            }
+            else if (IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2)
+            {
+                embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2?.Invoke(EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2!);
+            }
+            else if (IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3)
+            {
+                embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3?.Invoke(EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3!);
+            }
+            else if (IsEmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3)
+            {
+                embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3?.Invoke(EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant1 = null,
+            global::System.Action<int?>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant2 = null,
+            global::System.Action<global::System.Collections.Generic.IList<int>>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1ItemsVariant3 = null,
+            global::System.Action<global::PredictionGuard.EmbeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3>? embeddingsPostRequestBodyContentApplicationJsonSchemaInputOneOf1Items3 = null,
             bool validate = true)
         {
             if (validate)

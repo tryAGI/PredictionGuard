@@ -27,6 +27,26 @@ namespace PredictionGuard
         public bool IsResponsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1 => ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1 != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1;
+            return IsResponsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PickResponsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1() => IsResponsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1
+            ? ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1' but the value was {ToString()}.");
+
+        /// <summary>
         /// An object representing the tool to be chosen
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -42,6 +62,26 @@ namespace PredictionGuard
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1))]
 #endif
         public bool IsResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1 => ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1? value)
+        {
+            value = ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1;
+            return IsResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1 PickResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1() => IsResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1
+            ? ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +103,11 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public static ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice FromResponsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1(string? value) => new ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice(global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1 value) => new ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice((global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1?)value);
 
         /// <summary>
@@ -77,6 +122,11 @@ namespace PredictionGuard
         {
             ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice FromResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1(global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1? value) => new ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice(value);
 
         /// <summary>
         /// 
@@ -118,8 +168,8 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? responsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1 = null,
-            global::System.Func<global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1?, TResult>? responsesPostRequestBodyContentApplicationJsonSchemaToolChoice1 = null,
+            global::System.Func<string, TResult>? responsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1 = null,
+            global::System.Func<global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1, TResult>? responsesPostRequestBodyContentApplicationJsonSchemaToolChoice1 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +193,32 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? responsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1 = null,
-            global::System.Action<global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1?>? responsesPostRequestBodyContentApplicationJsonSchemaToolChoice1 = null,
+            global::System.Action<string>? responsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1 = null,
+
+            global::System.Action<global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1>? responsesPostRequestBodyContentApplicationJsonSchemaToolChoice1 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsResponsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1)
+            {
+                responsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1?.Invoke(ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1!);
+            }
+            else if (IsResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1)
+            {
+                responsesPostRequestBodyContentApplicationJsonSchemaToolChoice1?.Invoke(ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? responsesPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1 = null,
+            global::System.Action<global::PredictionGuard.ResponsesPostRequestBodyContentApplicationJsonSchemaToolChoice1>? responsesPostRequestBodyContentApplicationJsonSchemaToolChoice1 = null,
             bool validate = true)
         {
             if (validate)

@@ -29,6 +29,26 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant1;
+            return IsPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PickPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant1() => IsPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant1
+            ? PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<string>? PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2 { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace PredictionGuard
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2))]
 #endif
         public bool IsPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2 => PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<string>? value)
+        {
+            value = PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2;
+            return IsPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.IList<string> PickPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2() => IsPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2
+            ? PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -59,6 +99,11 @@ namespace PredictionGuard
         {
             PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PiiPostRequestBodyContentApplicationJsonSchemaPrompt FromPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant1(string? value) => new PiiPostRequestBodyContentApplicationJsonSchemaPrompt(value);
 
         /// <summary>
         /// 
@@ -100,8 +145,8 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? piiPostRequestBodyContentApplicationJsonSchemaPromptVariant1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<string>?, TResult>? piiPostRequestBodyContentApplicationJsonSchemaPromptVariant2 = null,
+            global::System.Func<string, TResult>? piiPostRequestBodyContentApplicationJsonSchemaPromptVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<string>, TResult>? piiPostRequestBodyContentApplicationJsonSchemaPromptVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -125,8 +170,32 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? piiPostRequestBodyContentApplicationJsonSchemaPromptVariant1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<string>?>? piiPostRequestBodyContentApplicationJsonSchemaPromptVariant2 = null,
+            global::System.Action<string>? piiPostRequestBodyContentApplicationJsonSchemaPromptVariant1 = null,
+
+            global::System.Action<global::System.Collections.Generic.IList<string>>? piiPostRequestBodyContentApplicationJsonSchemaPromptVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant1)
+            {
+                piiPostRequestBodyContentApplicationJsonSchemaPromptVariant1?.Invoke(PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant1!);
+            }
+            else if (IsPiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2)
+            {
+                piiPostRequestBodyContentApplicationJsonSchemaPromptVariant2?.Invoke(PiiPostRequestBodyContentApplicationJsonSchemaPromptVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? piiPostRequestBodyContentApplicationJsonSchemaPromptVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<string>>? piiPostRequestBodyContentApplicationJsonSchemaPromptVariant2 = null,
             bool validate = true)
         {
             if (validate)

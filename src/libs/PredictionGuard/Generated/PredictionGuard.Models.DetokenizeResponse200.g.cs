@@ -85,5 +85,6 @@ namespace PredictionGuard
         public DetokenizeResponse200()
         {
         }
+
     }
 }

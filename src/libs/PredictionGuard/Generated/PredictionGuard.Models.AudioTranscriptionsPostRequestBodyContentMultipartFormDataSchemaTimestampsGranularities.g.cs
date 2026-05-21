@@ -29,6 +29,26 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickAudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1;
+            return IsAudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PickAudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1() => IsAudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1
+            ? AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<object>? AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2 { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace PredictionGuard
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2))]
 #endif
         public bool IsAudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2 => AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickAudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<object>? value)
+        {
+            value = AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2;
+            return IsAudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.IList<object> PickAudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2() => IsAudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2
+            ? AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -59,6 +99,11 @@ namespace PredictionGuard
         {
             AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularities FromAudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1(string? value) => new AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularities(value);
 
         /// <summary>
         /// 
@@ -100,8 +145,8 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? audioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<object>?, TResult>? audioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2 = null,
+            global::System.Func<string, TResult>? audioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<object>, TResult>? audioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -125,8 +170,32 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? audioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<object>?>? audioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2 = null,
+            global::System.Action<string>? audioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1 = null,
+
+            global::System.Action<global::System.Collections.Generic.IList<object>>? audioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsAudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1)
+            {
+                audioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1?.Invoke(AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1!);
+            }
+            else if (IsAudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2)
+            {
+                audioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2?.Invoke(AudioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? audioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<object>>? audioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2 = null,
             bool validate = true)
         {
             if (validate)

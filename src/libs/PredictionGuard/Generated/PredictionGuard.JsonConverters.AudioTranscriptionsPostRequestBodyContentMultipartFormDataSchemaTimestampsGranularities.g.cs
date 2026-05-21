@@ -108,7 +108,10 @@ namespace PredictionGuard.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (audioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant1 == null && audioTranscriptionsPostRequestBodyContentMultipartFormDataSchemaTimestampsGranularitiesVariant2 == null)
+            {
                 try
                 {
 

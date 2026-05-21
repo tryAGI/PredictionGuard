@@ -29,6 +29,26 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1;
+            return IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PickChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1() => IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1
+            ? ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<string>? ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2 { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace PredictionGuard
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2))]
 #endif
         public bool IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2 => ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<string>? value)
+        {
+            value = ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2;
+            return IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.IList<string> PickChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2() => IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2
+            ? ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -59,6 +99,11 @@ namespace PredictionGuard
         {
             ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStop FromChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1(string? value) => new ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStop(value);
 
         /// <summary>
         /// 
@@ -100,8 +145,8 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<string>?, TResult>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2 = null,
+            global::System.Func<string, TResult>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<string>, TResult>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -125,8 +170,32 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<string>?>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2 = null,
+            global::System.Action<string>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1 = null,
+
+            global::System.Action<global::System.Collections.Generic.IList<string>>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1)
+            {
+                chatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1?.Invoke(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1!);
+            }
+            else if (IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2)
+            {
+                chatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2?.Invoke(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<string>>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2 = null,
             bool validate = true)
         {
             if (validate)

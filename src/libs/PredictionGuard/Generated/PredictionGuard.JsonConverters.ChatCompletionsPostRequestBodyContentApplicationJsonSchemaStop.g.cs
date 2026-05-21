@@ -108,7 +108,10 @@ namespace PredictionGuard.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (chatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant1 == null && chatCompletionsPostRequestBodyContentApplicationJsonSchemaStopVariant2 == null)
+            {
                 try
                 {
 

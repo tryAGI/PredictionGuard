@@ -27,6 +27,26 @@ namespace PredictionGuard
         public bool IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1 => ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1 != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1;
+            return IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PickChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1() => IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1
+            ? ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1' but the value was {ToString()}.");
+
+        /// <summary>
         /// An object representing the tool to be chosen
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -42,6 +62,26 @@ namespace PredictionGuard
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1))]
 #endif
         public bool IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1 => ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1? value)
+        {
+            value = ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1;
+            return IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1 PickChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1() => IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1
+            ? ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +103,11 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
+        public static ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice FromChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1(string? value) => new ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice(global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1 value) => new ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice((global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1?)value);
 
         /// <summary>
@@ -77,6 +122,11 @@ namespace PredictionGuard
         {
             ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice FromChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1(global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1? value) => new ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice(value);
 
         /// <summary>
         /// 
@@ -118,8 +168,8 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1 = null,
-            global::System.Func<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1?, TResult>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1 = null,
+            global::System.Func<string, TResult>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1 = null,
+            global::System.Func<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1, TResult>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +193,32 @@ namespace PredictionGuard
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1 = null,
-            global::System.Action<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1?>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1 = null,
+            global::System.Action<string>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1 = null,
+
+            global::System.Action<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1)
+            {
+                chatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1?.Invoke(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1!);
+            }
+            else if (IsChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1)
+            {
+                chatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1?.Invoke(ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoiceVariant1 = null,
+            global::System.Action<global::PredictionGuard.ChatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1>? chatCompletionsPostRequestBodyContentApplicationJsonSchemaToolChoice1 = null,
             bool validate = true)
         {
             if (validate)
