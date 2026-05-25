@@ -109,7 +109,7 @@ namespace PredictionGuard
             {
 
                             var __pathBuilder = new global::PredictionGuard.PathBuilder(
-                                path: $"/models/{capability}",
+                                path: $"/models/{(global::System.Uri.EscapeDataString(capability?.ToValueString() ?? string.Empty))}",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::PredictionGuard.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -170,7 +170,7 @@ namespace PredictionGuard
                             context: global::PredictionGuard.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "Models",
                                 methodName: "ModelsAsync",
-                                pathTemplate: "$\"/models/{capability}\"",
+                                pathTemplate: "$\"/models/{(global::System.Uri.EscapeDataString(capability?.ToValueString() ?? string.Empty))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -204,7 +204,7 @@ namespace PredictionGuard
                             context: global::PredictionGuard.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "Models",
                                 methodName: "ModelsAsync",
-                                pathTemplate: "$\"/models/{capability}\"",
+                                pathTemplate: "$\"/models/{(global::System.Uri.EscapeDataString(capability?.ToValueString() ?? string.Empty))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -245,7 +245,7 @@ namespace PredictionGuard
                             context: global::PredictionGuard.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "Models",
                                 methodName: "ModelsAsync",
-                                pathTemplate: "$\"/models/{capability}\"",
+                                pathTemplate: "$\"/models/{(global::System.Uri.EscapeDataString(capability?.ToValueString() ?? string.Empty))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -293,7 +293,7 @@ namespace PredictionGuard
                             context: global::PredictionGuard.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "Models",
                                 methodName: "ModelsAsync",
-                                pathTemplate: "$\"/models/{capability}\"",
+                                pathTemplate: "$\"/models/{(global::System.Uri.EscapeDataString(capability?.ToValueString() ?? string.Empty))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -315,7 +315,7 @@ namespace PredictionGuard
                             context: global::PredictionGuard.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "Models",
                                 methodName: "ModelsAsync",
-                                pathTemplate: "$\"/models/{capability}\"",
+                                pathTemplate: "$\"/models/{(global::System.Uri.EscapeDataString(capability?.ToValueString() ?? string.Empty))}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
