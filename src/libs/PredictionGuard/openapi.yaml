@@ -761,7 +761,7 @@ paths:
                     - index: 0
                       delta:
                         content: " feel"
-                      generated_text: 
+                      generated_text:
                       finish_reason: length
                 Image Input:
                   value:
@@ -1032,8 +1032,8 @@ paths:
                     choices:
                     - index: 0
                       text: " please"
-                      finish_reason: 
-                      stop_reason: 
+                      finish_reason:
+                      stop_reason:
       security:
       - bearerAuth: []
   "/documents/extract":
@@ -1484,7 +1484,7 @@ paths:
                         parameters:
                           properties:
                             description:
-                              default: 
+                              default:
                               description: Query description
                               type: string
                             query:
@@ -1826,8 +1826,8 @@ paths:
                           description: The name of the tool used in the tool call
                             from the previous output.
                         output:
-                          type: 
-                          description: 
+                          type:
+                          description:
                 instructions:
                   type: string
                   description: A system (or developer) message inserted into the model's
@@ -1879,10 +1879,10 @@ paths:
                     properties:
                       type:
                         type: string
-                        description: 
+                        description:
                       mode:
                         type: string
-                        description: 
+                        description:
                       tools:
                         type: array
                         description: Allows for multiple tools to be set in tool_choice.
@@ -2180,10 +2180,10 @@ paths:
                     properties:
                       type:
                         type: string
-                        description: 
+                        description:
                       mode:
                         type: string
-                        description: 
+                        description:
                       tools:
                         type: array
                         description: Allows for multiple tools to be set in tool_choice.
