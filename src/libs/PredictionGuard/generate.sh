@@ -84,7 +84,7 @@ end
 spec["security"] = [{ "bearerAuth" => [] }]
 spec["servers"] = [{ "url" => "https://api.predictionguard.com" }]
 
-File.write(output, YAML.dump(spec))
+File.write(output, YAML.dump(spec).gsub(/[ \t]+$/, ""))
 RUBY
 
 autosdk generate openapi.yaml \
