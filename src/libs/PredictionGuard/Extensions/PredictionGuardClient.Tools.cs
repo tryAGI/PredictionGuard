@@ -21,7 +21,7 @@ public static class PredictionGuardToolExtensions
         return AIFunctionFactory.Create(
             async (string text, string reference, CancellationToken cancellationToken) =>
             {
-                var response = await client.FactualityAsync(
+                var response = await client.CreateFactualityAsync(
                     reference: reference,
                     text: text,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -46,7 +46,7 @@ public static class PredictionGuardToolExtensions
         return AIFunctionFactory.Create(
             async (string text, CancellationToken cancellationToken) =>
             {
-                var response = await client.ToxicityAsync(
+                var response = await client.CreateToxicityAsync(
                     text: text,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
@@ -75,7 +75,7 @@ public static class PredictionGuardToolExtensions
         return AIFunctionFactory.Create(
             async (string text, CancellationToken cancellationToken) =>
             {
-                var response = await client.PiiAsync(
+                var response = await client.CreatePiiAsync(
                     prompt: text,
                     replace: replace,
                     replaceMethod: replaceMethod,
@@ -101,7 +101,7 @@ public static class PredictionGuardToolExtensions
         return AIFunctionFactory.Create(
             async (string text, CancellationToken cancellationToken) =>
             {
-                var response = await client.InjectionAsync(
+                var response = await client.CreateInjectionAsync(
                     prompt: text,
                     detect: true,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
@@ -112,7 +112,7 @@ public static class PredictionGuardToolExtensions
             description: "Detects potential prompt injection attacks in the given text. Returns a probability score between 0 and 1, where higher scores indicate a higher likelihood of prompt injection.");
     }
 
-    private static string FormatFactualityResponse(FactualityResponse200 response)
+    private static string FormatFactualityResponse(CreateFactualityResponse3 response)
     {
         var parts = new List<string> { "Factuality Check:" };
 
@@ -131,7 +131,7 @@ public static class PredictionGuardToolExtensions
         return string.Join("\n", parts);
     }
 
-    private static string FormatToxicityResponse(ToxicityResponse200 response)
+    private static string FormatToxicityResponse(CreateToxicityResponse3 response)
     {
         var parts = new List<string> { "Toxicity Check:" };
 
@@ -150,7 +150,7 @@ public static class PredictionGuardToolExtensions
         return string.Join("\n", parts);
     }
 
-    private static string FormatPiiResponse(PiiResponse200 response)
+    private static string FormatPiiResponse(CreatePiiResponse3 response)
     {
         var parts = new List<string> { "PII Detection:" };
 
@@ -189,7 +189,7 @@ public static class PredictionGuardToolExtensions
         return string.Join("\n", parts);
     }
 
-    private static string FormatInjectionResponse(InjectionResponse200 response)
+    private static string FormatInjectionResponse(CreateInjectionResponse3 response)
     {
         var parts = new List<string> { "Injection Detection:" };
 

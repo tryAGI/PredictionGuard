@@ -13,40 +13,79 @@ fetch_spec() {
     --connect-timeout 30 --max-time 300
 }
 
-# OpenAPI spec: https://docs.predictionguard.com/openapi.json
 install_autosdk_cli
 rm -rf Generated
-fetch_spec --fail --silent --show-error -L -o openapi.yaml https://docs.predictionguard.com/openapi.json
+
+# Prediction Guard publishes one OpenAPI document per API area.
+spec_dir=$(mktemp -d)
+trap 'rm -rf "$spec_dir"' EXIT
+spec_names=(
+  responses
+  chat-completions
+  completions
+  embeddings
+  audio
+  documents
+  rerank
+  tokenization
+  safety
+  models
+  mcp
+)
+
+for spec_name in "${spec_names[@]}"; do
+  fetch_spec \
+    -o "$spec_dir/$spec_name.yaml" \
+    "https://raw.githubusercontent.com/predictionguard/docs/main/fern/openapi/$spec_name.yaml"
+done
 
 # Fix the spec:
-# 1. Remove inline Authorization header parameters (each endpoint defines auth as a parameter)
-# 2. Add top-level security array referencing bearerAuth (already defined in securitySchemes)
-# 3. Fix server URL (spec uses template placeholder instead of actual URL)
-python3 << 'PYEOF'
-import json
+# 1. Merge the per-area documents and fail on conflicting paths or components.
+# 2. Remove inline Authorization header parameters.
+# 3. Add top-level bearer security and replace the template server URL.
+ruby -ryaml - "$spec_dir" openapi.yaml <<'RUBY'
+spec_dir, output = ARGV
+files = Dir[File.join(spec_dir, "*.yaml")].sort
+specs = files.map { |file| YAML.safe_load(File.read(file), aliases: true) }
+spec = specs.shift
 
-with open('openapi.yaml', 'r') as f:
-    spec = json.load(f)
+specs.each_with_index do |source_spec, index|
+  source = files[index + 1]
 
-# Remove Authorization header parameters from all operations
-for path, methods in spec.get('paths', {}).items():
-    for method_name in ['get', 'post', 'put', 'delete', 'patch']:
-        if method_name in methods:
-            op = methods[method_name]
-            if 'parameters' in op:
-                op['parameters'] = [p for p in op['parameters'] if p.get('name') != 'Authorization']
-                if not op['parameters']:
-                    del op['parameters']
+  (source_spec["paths"] || {}).each do |path, value|
+    raise "Conflicting path #{path} in #{source}" if spec.fetch("paths", {}).key?(path)
 
-# Add top-level security
-spec['security'] = [{'bearerAuth': []}]
+    (spec["paths"] ||= {})[path] = value
+  end
 
-# Fix server URL
-spec['servers'] = [{'url': 'https://api.predictionguard.com'}]
+  (source_spec["components"] || {}).each do |kind, entries|
+    target = ((spec["components"] ||= {})[kind] ||= {})
 
-with open('openapi.yaml', 'w') as f:
-    json.dump(spec, f, indent=2)
-PYEOF
+    (entries || {}).each do |name, value|
+      if target.key?(name) && target[name] != value
+        raise "Conflicting component #{kind}/#{name} in #{source}"
+      end
+
+      target[name] ||= value
+    end
+  end
+end
+
+spec.fetch("paths", {}).each_value do |methods|
+  %w[get post put delete patch].each do |method_name|
+    operation = methods[method_name]
+    next unless operation&.key?("parameters")
+
+    operation["parameters"].reject! { |parameter| parameter["name"] == "Authorization" }
+    operation.delete("parameters") if operation["parameters"].empty?
+  end
+end
+
+spec["security"] = [{ "bearerAuth" => [] }]
+spec["servers"] = [{ "url" => "https://api.predictionguard.com" }]
+
+File.write(output, YAML.dump(spec))
+RUBY
 
 autosdk generate openapi.yaml \
   --namespace PredictionGuard \

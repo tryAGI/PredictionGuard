@@ -4,6 +4,7 @@
 namespace PredictionGuard
 {
     /// <summary>
+    /// This is the Prediction Guard API, designed to provide various language-related services and checks.<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>

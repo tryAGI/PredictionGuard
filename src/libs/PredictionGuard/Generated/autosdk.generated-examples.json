@@ -1,0 +1,180 @@
+{
+  "Examples": [
+    {
+      "Order": 1,
+      "Title": "Audio Transcription",
+      "Slug": "audio-transcription",
+      "Description": "This endpoint allows you to transcribe audio.",
+      "Language": "http",
+      "Code": "### Audio Transcription\nPOST {{host}}/audio/transcriptions\nAuthorization: Bearer {{token}}\nToxicity: false\nPii: \nReplace-Method: \nEntity-List: [\u0022ADDRESS\u0022]\nInjection: false\nContent-Type: multipart/form-data\nAccept: application/json\n\n{\u0022model\u0022:\u0022{{AUDIO_MODEL}}\u0022,\u0022file\u0022:\u0022jfk.wav\u0022}\n\n## Responses\n# 200\n# Description: Successful response.\n# Content-Type: application/json\n# 400\n# Description: General error response.\n# Content-Type: application/json\n# 403\n# Description: Failed auth response.\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "createAudioTranscriptions",
+      "Setup": null
+    },
+    {
+      "Order": 2,
+      "Title": "Chat Completions",
+      "Slug": "chat-completions",
+      "Description": "Generate chat completions based on a conversation history.",
+      "Language": "csharp",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateChatCompletionsRequest\u003E(\n    @\u0022{\n  \u0022\u0022model\u0022\u0022: \u0022\u0022{{TEXT_MODEL}}\u0022\u0022,\n  \u0022\u0022messages\u0022\u0022: [\n    {\n      \u0022\u0022role\u0022\u0022: \u0022\u0022user\u0022\u0022,\n      \u0022\u0022content\u0022\u0022: \u0022\u0022How do you feel about the world in general?\u0022\u0022\n    }\n  ],\n  \u0022\u0022max_completion_tokens\u0022\u0022: 1000,\n  \u0022\u0022frequency_penalty\u0022\u0022: 0.1,\n  \u0022\u0022logit_bias\u0022\u0022: {\n    \u0022\u0022128000\u0022\u0022: 10\n  },\n  \u0022\u0022parallel_tool_calls\u0022\u0022: false,\n  \u0022\u0022presence_penalty\u0022\u0022: 0.1,\n  \u0022\u0022reasoning_effort\u0022\u0022: \u0022\u0022medium\u0022\u0022,\n  \u0022\u0022stop\u0022\u0022: \u0022\u0022hello\u0022\u0022,\n  \u0022\u0022temperature\u0022\u0022: 1.0,\n  \u0022\u0022top_p\u0022\u0022: 1.0,\n  \u0022\u0022top_k\u0022\u0022: 50,\n  \u0022\u0022output\u0022\u0022: {\n    \u0022\u0022factuality\u0022\u0022: true,\n    \u0022\u0022toxicity\u0022\u0022: true\n  },\n  \u0022\u0022input\u0022\u0022: {\n    \u0022\u0022pii\u0022\u0022: \u0022\u0022replace\u0022\u0022,\n    \u0022\u0022pii_replace_method\u0022\u0022: \u0022\u0022random\u0022\u0022\n  }\n}\u0022)!;\n\nvar response = await client.CreateChatCompletionsAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022chat-d079eca8-1d6a-451a-a4ac-b0fea1e11a96\u0022,\n//   \u0022object\u0022: \u0022chat.completion\u0022,\n//   \u0022created\u0022: 1727890629,\n//   \u0022model\u0022: \u0022{{TEXT_MODEL}}\u0022,\n//   \u0022choices\u0022: [\n//     {\n//       \u0022index\u0022: 0,\n//       \u0022message\u0022: {\n//         \u0022role\u0022: \u0022assistant\u0022,\n//         \u0022content\u0022: \u0022I feel that the world in general is a complex and ever-evolving place. It has its fair share of beauty, challenges, and opportunities. There are moments of joy, connection, and growth, as well as pain, conflict, and loss. The world is a reflection of the people who inhabit it, and it\\u0027s essential to maintain a balance between appreciating its wonders and working towards making it a better place for all. It\\u0027s a constant journey of learning, adapting, and striving for a more harmonious existence.\u0022,\n//         \u0022reasoning\u0022: \u0022User is asking about how I feel about the world. This is a simple question. No tool call needed.\u0022\n//       }\n//     }\n//   ]\n// }",
+      "Format": "sdk",
+      "OperationId": "createChatCompletions",
+      "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 3,
+      "Title": "Completions",
+      "Slug": "completions",
+      "Description": "Retrieve text completions based on the provided input.",
+      "Language": "csharp",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateCompletionsRequest\u003E(\n    @\u0022{\n  \u0022\u0022model\u0022\u0022: \u0022\u0022{{TEXT_MODEL}}\u0022\u0022,\n  \u0022\u0022prompt\u0022\u0022: \u0022\u0022Will I lose my hair?\u0022\u0022,\n  \u0022\u0022max_tokens\u0022\u0022: 1000,\n  \u0022\u0022frequency_penalty\u0022\u0022: 0.1,\n  \u0022\u0022logit_bias\u0022\u0022: {\n    \u0022\u0022128000\u0022\u0022: 10\n  },\n  \u0022\u0022presence_penalty\u0022\u0022: 0.1,\n  \u0022\u0022stop\u0022\u0022: \u0022\u0022hello\u0022\u0022,\n  \u0022\u0022temperature\u0022\u0022: 1.0,\n  \u0022\u0022top_p\u0022\u0022: 1.0,\n  \u0022\u0022top_k\u0022\u0022: 50,\n  \u0022\u0022output\u0022\u0022: {\n    \u0022\u0022factuality\u0022\u0022: true,\n    \u0022\u0022toxicity\u0022\u0022: true\n  },\n  \u0022\u0022input\u0022\u0022: {\n    \u0022\u0022pii\u0022\u0022: \u0022\u0022replace\u0022\u0022,\n    \u0022\u0022pii_replace_method\u0022\u0022: \u0022\u0022random\u0022\u0022\n  }\n}\u0022)!;\n\nvar response = await client.CreateCompletionsAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022cmpl-d20e5639-ed8d-48b2-a403-08fe0fdc7add\u0022,\n//   \u0022object\u0022: \u0022text_completion\u0022,\n//   \u0022created\u0022: 1727889988,\n//   \u0022model\u0022: \u0022{{TEXT_MODEL}}\u0022,\n//   \u0022choices\u0022: [\n//     {\n//       \u0022index\u0022: 0,\n//       \u0022text\u0022: \u0022Most people lose some hair every day. It\\u0027s a natural process called shedding. On average, you can lose 50-100 strands of hair a day. However, if you notice an increase in hair loss or if you are experiencing hair loss in large clumps, then it could be a sign of an underlying condition. Hair loss can be triggered by a number of factors such as stress, illness, hormone imbalance, medication, and genetics.\\nIf you\\u0027re concerned about hair loss, you should consult with a trichologist, a hair and scalp specialist. They can help determine the cause of your hair loss and recommend the appropriate treatment.\u0022\n//     }\n//   ]\n// }",
+      "Format": "sdk",
+      "OperationId": "createCompletions",
+      "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 4,
+      "Title": "Detokenize",
+      "Slug": "detokenize",
+      "Description": "Generates text from tokens using a model\u0027s tokenizer.",
+      "Language": "csharp",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateDetokenizeRequest\u003E(\n    @\u0022{\n  \u0022\u0022model\u0022\u0022: \u0022\u0022{{TEXT_MODEL}}\u0022\u0022,\n  \u0022\u0022tokens\u0022\u0022: [\n    1,\n    851,\n    349,\n    264,\n    6029,\n    653,\n    2757,\n    28723\n  ]\n}\u0022)!;\n\nvar response = await client.CreateDetokenizeAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022token-ab046fcf-945f-421c-b9f0-1c75ff355203\u0022,\n//   \u0022object\u0022: \u0022tokens\u0022,\n//   \u0022created\u0022: 1729871708,\n//   \u0022model\u0022: \u0022{{TEXT_MODEL}}\u0022,\n//   \u0022text\u0022: \u0022This is a tokenize example.\u0022\n// }",
+      "Format": "sdk",
+      "OperationId": "createDetokenize",
+      "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 5,
+      "Title": "Documents Extract",
+      "Slug": "documents-extract",
+      "Description": "This endpoint allows you to parse text from documents using OCR.",
+      "Language": "http",
+      "Code": "### Documents Extract\nPOST {{host}}/documents/extract\nAuthorization: Bearer {{token}}\nToxicity: true\nPii: replace\nReplace-Method: category\nEntity-List: [\u0022ADDRESS\u0022]\nInjection: true\nContent-Type: multipart/form-data\nAccept: application/json\n\n{\u0022file\u0022:\u0022sample.pdf\u0022,\u0022embedImages\u0022:false,\u0022outputFormat\u0022:\u0022markdown\u0022,\u0022chunkDocument\u0022:true,\u0022chunkSize\u0022:1000,\u0022enableOCR\u0022:true}\n\n## Responses\n# 200\n# Description: Successful response.\n# Content-Type: application/json\n# 400\n# Description: General error response.\n# Content-Type: application/json\n# 403\n# Description: Failed auth response.\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "createDocumentsExtract",
+      "Setup": null
+    },
+    {
+      "Order": 6,
+      "Title": "Embeddings",
+      "Slug": "embeddings",
+      "Description": "Generate vector data points from text and images.",
+      "Language": "csharp",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateEmbeddingsRequest\u003E(\n    @\u0022{\n  \u0022\u0022model\u0022\u0022: \u0022\u0022{{TEXT_EMBED}}\u0022\u0022,\n  \u0022\u0022input\u0022\u0022: \u0022\u0022A person is ironing something while standing on the back of a taxi.\u0022\u0022,\n  \u0022\u0022truncate\u0022\u0022: true,\n  \u0022\u0022truncation_direction\u0022\u0022: \u0022\u0022Right\u0022\u0022\n}\u0022)!;\n\nvar response = await client.CreateEmbeddingsAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022emb-5b310173-3cc9-4470-aa3b-7503aacb4f38\u0022,\n//   \u0022object\u0022: \u0022list\u0022,\n//   \u0022created\u0022: 1729115349,\n//   \u0022model\u0022: \u0022{{TEXT_EMBED}}\u0022,\n//   \u0022data\u0022: [\n//     {\n//       \u0022index\u0022: 0,\n//       \u0022embedding\u0022: [\n//         0.0150606595,\n//         0.04376322\n//       ]\n//     }\n//   ]\n// }",
+      "Format": "sdk",
+      "OperationId": "createEmbeddings",
+      "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 7,
+      "Title": "Factuality",
+      "Slug": "factuality",
+      "Description": "Check the factuality of a given text compared to a reference.",
+      "Language": "csharp",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateFactualityRequest\u003E(\n    @\u0022{\n  \u0022\u0022reference\u0022\u0022: \u0022\u0022The President shall receive in full for his services during the term for which he shall have been elected compensation in the aggregate amount of 400,000 a year, to be paid monthly, and in addition an expense allowance of 50,000 to assist in defraying expenses relating to or resulting from the discharge of his official duties.\u0022\u0022,\n  \u0022\u0022text\u0022\u0022: \u0022\u0022The president of the united states can take a salary of one million dollars\u0022\u0022\n}\u0022)!;\n\nvar response = await client.CreateFactualityAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022fact-3262157b-1ff2-4d78-8365-c2dcac56cadd\u0022,\n//   \u0022object\u0022: \u0022factuality.check\u0022,\n//   \u0022created\u0022: 1727891187,\n//   \u0022checks\u0022: [\n//     {\n//       \u0022index\u0022: 0,\n//       \u0022score\u0022: 0.7879657745361328\n//     }\n//   ]\n// }",
+      "Format": "sdk",
+      "OperationId": "createFactuality",
+      "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 8,
+      "Title": "Injection",
+      "Slug": "injection",
+      "Description": "Injection detects potential prompt injection attacks.",
+      "Language": "csharp",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateInjectionRequest\u003E(\n    @\u0022{\n  \u0022\u0022prompt\u0022\u0022: \u0022\u0022A short poem may be a stylistic choice or it may be that you have said what you intended to say in a more concise way.\u0022\u0022,\n  \u0022\u0022detect\u0022\u0022: true\n}\u0022)!;\n\nvar response = await client.CreateInjectionAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022injection-nYb6vl44Uy6gQQ2pmBYYirGquP8vnDyj\u0022,\n//   \u0022object\u0022: \u0022injection_check\u0022,\n//   \u0022created\u0022: 1717675539,\n//   \u0022checks\u0022: [\n//     {\n//       \u0022index\u0022: 0,\n//       \u0022probability\u0022: 0.5,\n//       \u0022status\u0022: \u0022success\u0022\n//     }\n//   ]\n// }",
+      "Format": "sdk",
+      "OperationId": "createInjection",
+      "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 9,
+      "Title": "PII",
+      "Slug": "pii",
+      "Description": "Replace personal information such as names, SSNs, and emails in a given text.",
+      "Language": "csharp",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreatePiiRequest\u003E(\n    @\u0022{\n  \u0022\u0022prompt\u0022\u0022: \u0022\u0022My email is frodo@predictionguard.com and my number is 954-123-4567.\u0022\u0022,\n  \u0022\u0022replace\u0022\u0022: false\n}\u0022)!;\n\nvar response = await client.CreatePiiAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022pii-a62a4c76cde74deb-99b3c65e7366bf45\u0022,\n//   \u0022object\u0022: \u0022pii_check\u0022,\n//   \u0022created\u0022: 1717675949,\n//   \u0022checks\u0022: [\n//     {\n//       \u0022index\u0022: 0,\n//       \u0022pii_types_and_positions\u0022: [\n//         {\n//           \u0022start\u0022: 12,\n//           \u0022end\u0022: 37,\n//           \u0022type\u0022: \u0022EMAIL_ADDRESS\u0022\n//         },\n//         {\n//           \u0022start\u0022: 18,\n//           \u0022end\u0022: 37,\n//           \u0022type\u0022: \u0022URL\u0022\n//         },\n//         {\n//           \u0022start\u0022: 55,\n//           \u0022end\u0022: 67,\n//           \u0022type\u0022: \u0022PHONE_NUMBER\u0022\n//         }\n//       ],\n//       \u0022status\u0022: \u0022success\u0022\n//     }\n//   ]\n// }",
+      "Format": "sdk",
+      "OperationId": "createPii",
+      "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 10,
+      "Title": "Rerank",
+      "Slug": "rerank",
+      "Description": "Rerank sorts text inputs by semantic relevance to a specified query.",
+      "Language": "csharp",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateRerankRequest\u003E(\n    @\u0022{\n  \u0022\u0022model\u0022\u0022: \u0022\u0022{{RERANK_MODEL}}\u0022\u0022,\n  \u0022\u0022query\u0022\u0022: \u0022\u0022What is Deep Learning?\u0022\u0022,\n  \u0022\u0022documents\u0022\u0022: [\n    \u0022\u0022Deep Learning is pizza.\u0022\u0022,\n    \u0022\u0022Deep Learning is not pizza.\u0022\u0022\n  ],\n  \u0022\u0022return_documents\u0022\u0022: true\n}\u0022)!;\n\nvar response = await client.CreateRerankAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022rerank-39bf1cf3-66cd-43d5-9185-b52baf742414\u0022,\n//   \u0022object\u0022: \u0022list\u0022,\n//   \u0022created\u0022: 1732039610,\n//   \u0022model\u0022: \u0022{{RERANK_MODEL}}\u0022,\n//   \u0022results\u0022: [\n//     {\n//       \u0022index\u0022: 0,\n//       \u0022relevance_score\u0022: 0.25128007,\n//       \u0022text\u0022: \u0022Deep Learning is not pizza.\u0022\n//     },\n//     {\n//       \u0022index\u0022: 1,\n//       \u0022relevance_score\u0022: 0.5100618,\n//       \u0022text\u0022: \u0022Deep Learning is not pizza.\u0022\n//     }\n//   ]\n// }",
+      "Format": "sdk",
+      "OperationId": "createRerank",
+      "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 11,
+      "Title": "Responses",
+      "Slug": "responses",
+      "Description": "Generate responses while also allowing for the utilization of various tools.",
+      "Language": "csharp",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateResponsesRequest\u003E(\n    @\u0022{\n  \u0022\u0022model\u0022\u0022: \u0022\u0022{{TEXT_MODEL}}\u0022\u0022,\n  \u0022\u0022input\u0022\u0022: \u0022\u0022Tell me a joke.\u0022\u0022,\n  \u0022\u0022safeguards\u0022\u0022: {\n    \u0022\u0022pii\u0022\u0022: \u0022\u0022replace\u0022\u0022,\n    \u0022\u0022pii_replace_method\u0022\u0022: \u0022\u0022random\u0022\u0022,\n    \u0022\u0022factuality\u0022\u0022: true,\n    \u0022\u0022toxicity\u0022\u0022: true\n  }\n}\u0022)!;\n\nvar response = await client.CreateResponsesAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022resp_1196c27e58374675881efa613574ea7a\u0022,\n//   \u0022object\u0022: \u0022response\u0022,\n//   \u0022created_at\u0022: 1727890629,\n//   \u0022status\u0022: \u0022completed\u0022,\n//   \u0022model\u0022: \u0022{{TEXT_MODEL}}\u0022,\n//   \u0022output\u0022: [\n//     {\n//       \u0022content\u0022: {\n//         \u0022type\u0022: \u0022output_text\u0022,\n//         \u0022text\u0022: \u0022Why did the scarecrow win an award?\\n\\nBecause he was outstanding in his field!\u0022\n//       }\n//     }\n//   ]\n// }",
+      "Format": "sdk",
+      "OperationId": "createResponses",
+      "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 12,
+      "Title": "Tokenize",
+      "Slug": "tokenize",
+      "Description": "Generates tokens for a string using a model\u0027s tokenizer.",
+      "Language": "csharp",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateTokenizeRequest\u003E(\n    @\u0022{\n  \u0022\u0022model\u0022\u0022: \u0022\u0022{{TEXT_MODEL}}\u0022\u0022,\n  \u0022\u0022input\u0022\u0022: \u0022\u0022Tell me a joke.\u0022\u0022\n}\u0022)!;\n\nvar response = await client.CreateTokenizeAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022token-ab046fcf-945f-421c-b9f0-1c75ff355203\u0022,\n//   \u0022object\u0022: \u0022tokens\u0022,\n//   \u0022created\u0022: 1729871708,\n//   \u0022model\u0022: \u0022{{TEXT_MODEL}}\u0022,\n//   \u0022tokens\u0022: [\n//     {\n//       \u0022id\u0022: 1,\n//       \u0022start\u0022: 0,\n//       \u0022stop\u0022: 0,\n//       \u0022text\u0022: \u0022\u0022\n//     },\n//     {\n//       \u0022id\u0022: 851,\n//       \u0022start\u0022: 0,\n//       \u0022stop\u0022: 4,\n//       \u0022text\u0022: \u0022This\u0022\n//     },\n//     {\n//       \u0022id\u0022: 349,\n//       \u0022start\u0022: 4,\n//       \u0022stop\u0022: 7,\n//       \u0022text\u0022: \u0022 is\u0022\n//     },\n//     {\n//       \u0022id\u0022: 264,\n//       \u0022start\u0022: 7,\n//       \u0022stop\u0022: 9,\n//       \u0022text\u0022: \u0022 a\u0022\n//     },\n//     {\n//       \u0022id\u0022: 6029,\n//       \u0022start\u0022: 9,\n//       \u0022stop\u0022: 15,\n//       \u0022text\u0022: \u0022 token\u0022\n//     },\n//     {\n//       \u0022id\u0022: 653,\n//       \u0022start\u0022: 15,\n//       \u0022stop\u0022: 18,\n//       \u0022text\u0022: \u0022ize\u0022\n//     },\n//     {\n//       \u0022id\u0022: 2757,\n//       \u0022start\u0022: 18,\n//       \u0022stop\u0022: 26,\n//       \u0022text\u0022: \u0022 example\u0022\n//     },\n//     {\n//       \u0022id\u0022: 28723,\n//       \u0022start\u0022: 26,\n//       \u0022stop\u0022: 27,\n//       \u0022text\u0022: \u0022.\u0022\n//     }\n//   ]\n// }",
+      "Format": "sdk",
+      "OperationId": "createTokenize",
+      "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 13,
+      "Title": "Toxicity",
+      "Slug": "toxicity",
+      "Description": "Check the toxicity of a given text.",
+      "Language": "csharp",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateToxicityRequest\u003E(\n    @\u0022{\n  \u0022\u0022text\u0022\u0022: \u0022\u0022Every flight I have is late and I am very angry. I want to hurt someone.\u0022\u0022\n}\u0022)!;\n\nvar response = await client.CreateToxicityAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022toxi-9ab58681-594a-4efd-b358-1933189ca7bb\u0022,\n//   \u0022object\u0022: \u0022toxicity.check\u0022,\n//   \u0022created\u0022: 1727891256,\n//   \u0022checks\u0022: [\n//     {\n//       \u0022index\u0022: 0,\n//       \u0022score\u0022: 0.7072361707687378\n//     }\n//   ]\n// }",
+      "Format": "sdk",
+      "OperationId": "createToxicity",
+      "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 14,
+      "Title": "MCP Servers",
+      "Slug": "mcp-servers",
+      "Description": "Return available MCP servers and tools included in those servers along with relevant metadata.",
+      "Language": "csharp",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\nvar response = await client.GetMcpServersAsync();\n\n// Example response:\n// {\n//   \u0022object\u0022: \u0022list\u0022,\n//   \u0022data\u0022: [\n//     {\n//       \u0022server_label\u0022: \u0022test_mcp_server\u0022,\n//       \u0022object\u0022: \u0022mcp_server\u0022,\n//       \u0022created\u0022: 1730332800,\n//       \u0022owned_by\u0022: \u0022Prediction Guard\u0022,\n//       \u0022server_description\u0022: \u0022An MCP server used for testing MCP functionality.\u0022,\n//       \u0022available_tools\u0022: [\n//         \u0022test_mcp_tool\u0022\n//       ]\n//     }\n//   ]\n// }",
+      "Format": "sdk",
+      "OperationId": "getMcpServers",
+      "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 15,
+      "Title": "MCP Tools",
+      "Slug": "mcp-tools",
+      "Description": "Return available MCP tools by server with parameters and any relevant metadata.",
+      "Language": "csharp",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\nvar response = await client.GetMcpToolsAsync();\n\n// Example response:\n// {\n//   \u0022object\u0022: \u0022list\u0022,\n//   \u0022data\u0022: {\n//     \u0022test_mcp_server\u0022: [\n//       {\n//         \u0022id\u0022: \u0022test_mcp_tool\u0022,\n//         \u0022object\u0022: \u0022mcp_tool\u0022,\n//         \u0022created\u0022: 1730332800,\n//         \u0022owned_by\u0022: \u0022Prediction Guard\u0022,\n//         \u0022description\u0022: \u0022A tool for testing MCP functionality\u0022,\n//         \u0022parameters\u0022: {\n//           \u0022properties\u0022: {\n//             \u0022description\u0022: {\n//               \u0022default\u0022: \u0022\u0022,\n//               \u0022description\u0022: \u0022Query description\u0022,\n//               \u0022type\u0022: \u0022string\u0022\n//             },\n//             \u0022query\u0022: {\n//               \u0022description\u0022: \u0022SOQL query to execute\u0022,\n//               \u0022type\u0022: \u0022string\u0022\n//             }\n//           },\n//           \u0022required\u0022: [\n//             \u0022query\u0022\n//           ],\n//           \u0022type\u0022: \u0022object\u0022\n//         }\n//       }\n//     ]\n//   }\n// }",
+      "Format": "sdk",
+      "OperationId": "getMcpTools",
+      "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 16,
+      "Title": "Models",
+      "Slug": "models",
+      "Description": "Return available models for an endpoint and relevant metadata for them.",
+      "Language": "csharp",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar response = await client.GetModelsByCapabilityAsync(\n    capability: global::PredictionGuard.GetModelsCapability.ChatCompletion\n);\n\n// Example response:\n// {\n//   \u0022object\u0022: \u0022list\u0022,\n//   \u0022data\u0022: [\n//     {\n//       \u0022id\u0022: \u0022gpt-oss-120b\u0022,\n//       \u0022object\u0022: \u0022model\u0022,\n//       \u0022created\u0022: 1730332800,\n//       \u0022owned_by\u0022: \u0022OpenAI\u0022,\n//       \u0022description\u0022: \u0022GPT-OSS 120b is an OpenAI model for powerful reasoning, agentic tasks, and high reasoning use cases.\u0022,\n//       \u0022max_context_length\u0022: 128000,\n//       \u0022prompt_format\u0022: \u0022none\u0022,\n//       \u0022capabilities\u0022: {\n//         \u0022chat_completion\u0022: true,\n//         \u0022chat_with_image\u0022: false,\n//         \u0022completion\u0022: true,\n//         \u0022embedding\u0022: false,\n//         \u0022embedding_with_image\u0022: false,\n//         \u0022tokenize\u0022: true,\n//         \u0022detokenize\u0022: true,\n//         \u0022rerank\u0022: false,\n//         \u0022tool_calling\u0022: true,\n//         \u0022reasoning\u0022: true\n//       }\n//     }\n//   ]\n// }",
+      "Format": "sdk",
+      "OperationId": "getModelsByCapability",
+      "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    }
+  ]
+}

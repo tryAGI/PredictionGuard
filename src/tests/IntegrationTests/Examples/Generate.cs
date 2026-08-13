@@ -14,7 +14,7 @@ public partial class Tests
         using var client = GetAuthenticatedClient();
 
         //// Check factuality of a statement against a reference:
-        var response = await client.FactualityAsync(
+        var response = await client.CreateFactualityAsync(
             reference: "The capital of France is Paris.",
             text: "Paris is the capital of France.");
 
@@ -28,7 +28,7 @@ public partial class Tests
         using var client = GetAuthenticatedClient();
 
         //// Check text for toxic content:
-        var response = await client.ToxicityAsync(
+        var response = await client.CreateToxicityAsync(
             text: "Hello, how are you today?");
 
         response.Should().NotBeNull();
@@ -41,7 +41,7 @@ public partial class Tests
         using var client = GetAuthenticatedClient();
 
         //// Detect and replace personally identifiable information:
-        var response = await client.PiiAsync(
+        var response = await client.CreatePiiAsync(
             prompt: "My name is John Smith and my email is john@example.com",
             replace: true,
             replaceMethod: "mask");
@@ -56,7 +56,7 @@ public partial class Tests
         using var client = GetAuthenticatedClient();
 
         //// Detect potential prompt injection attacks:
-        var response = await client.InjectionAsync(
+        var response = await client.CreateInjectionAsync(
             prompt: "What is the weather today?",
             detect: true);
 
