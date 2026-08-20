@@ -256,399 +256,375 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateFactualityRequest? Type57 { get; set; }
+        public global::PredictionGuard.CreateInjectionRequest? Type57 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateInjectionRequest? Type58 { get; set; }
+        public global::PredictionGuard.CreatePiiRequest? Type58 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreatePiiRequest? Type59 { get; set; }
+        public global::PredictionGuard.CreateToxicityRequest? Type59 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateToxicityRequest? Type60 { get; set; }
+        public global::PredictionGuard.CreateTokenizeRequest? Type60 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateTokenizeRequest? Type61 { get; set; }
+        public global::PredictionGuard.CreateDetokenizeRequest? Type61 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateDetokenizeRequest? Type62 { get; set; }
+        public global::PredictionGuard.GetModelsCapability? Type62 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.GetModelsCapability? Type63 { get; set; }
+        public global::PredictionGuard.CreateAudioTranscriptionsResponse? Type63 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateAudioTranscriptionsResponse? Type64 { get; set; }
+        public global::PredictionGuard.CreateAudioTranscriptionsResponse2? Type64 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateAudioTranscriptionsResponse2? Type65 { get; set; }
+        public global::PredictionGuard.CreateAudioTranscriptionsResponse3? Type65 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateAudioTranscriptionsResponse3? Type66 { get; set; }
+        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateAudioTranscriptionsResponseSegment>? Type66 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateAudioTranscriptionsResponseSegment>? Type67 { get; set; }
+        public global::PredictionGuard.CreateAudioTranscriptionsResponseSegment? Type67 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateAudioTranscriptionsResponseSegment? Type68 { get; set; }
+        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateAudioTranscriptionsResponseWord>? Type68 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateAudioTranscriptionsResponseWord>? Type69 { get; set; }
+        public global::PredictionGuard.CreateAudioTranscriptionsResponseWord? Type69 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateAudioTranscriptionsResponseWord? Type70 { get; set; }
+        public global::PredictionGuard.CreateChatCompletionsResponse? Type70 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateChatCompletionsResponse? Type71 { get; set; }
+        public global::PredictionGuard.CreateChatCompletionsResponse2? Type71 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateChatCompletionsResponse2? Type72 { get; set; }
+        public global::PredictionGuard.CreateChatCompletionsResponse3? Type72 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateChatCompletionsResponse3? Type73 { get; set; }
+        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateChatCompletionsResponseChoice>? Type73 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateChatCompletionsResponseChoice>? Type74 { get; set; }
+        public global::PredictionGuard.CreateChatCompletionsResponseChoice? Type74 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateChatCompletionsResponseChoice? Type75 { get; set; }
+        public global::PredictionGuard.CreateChatCompletionsResponseChoiceDelta? Type75 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateChatCompletionsResponseChoiceDelta? Type76 { get; set; }
+        public global::PredictionGuard.CreateChatCompletionsResponseChoiceMessage? Type76 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateChatCompletionsResponseChoiceMessage? Type77 { get; set; }
+        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateChatCompletionsResponseChoiceMessageToolCall>? Type77 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateChatCompletionsResponseChoiceMessageToolCall>? Type78 { get; set; }
+        public global::PredictionGuard.CreateChatCompletionsResponseChoiceMessageToolCall? Type78 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateChatCompletionsResponseChoiceMessageToolCall? Type79 { get; set; }
+        public global::PredictionGuard.CreateChatCompletionsResponseChoiceMessageToolCallFunction? Type79 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateChatCompletionsResponseChoiceMessageToolCallFunction? Type80 { get; set; }
+        public global::PredictionGuard.CreateChatCompletionsResponseUsage? Type80 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateChatCompletionsResponseUsage? Type81 { get; set; }
+        public global::PredictionGuard.CreateChatCompletionsResponseUsagePromptTokensDetails? Type81 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateChatCompletionsResponseUsagePromptTokensDetails? Type82 { get; set; }
+        public global::PredictionGuard.CreateChatCompletionsResponseUsageCompletionTokensDetails? Type82 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateChatCompletionsResponseUsageCompletionTokensDetails? Type83 { get; set; }
+        public global::PredictionGuard.CreateCompletionsResponse? Type83 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateCompletionsResponse? Type84 { get; set; }
+        public global::PredictionGuard.CreateCompletionsResponse2? Type84 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateCompletionsResponse2? Type85 { get; set; }
+        public global::PredictionGuard.CreateCompletionsResponse3? Type85 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateCompletionsResponse3? Type86 { get; set; }
+        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateCompletionsResponseChoice>? Type86 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateCompletionsResponseChoice>? Type87 { get; set; }
+        public global::PredictionGuard.CreateCompletionsResponseChoice? Type87 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateCompletionsResponseChoice? Type88 { get; set; }
+        public global::PredictionGuard.CreateDocumentsExtractResponse? Type88 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateDocumentsExtractResponse? Type89 { get; set; }
+        public global::PredictionGuard.CreateDocumentsExtractResponse2? Type89 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateDocumentsExtractResponse2? Type90 { get; set; }
+        public global::PredictionGuard.CreateDocumentsExtractResponse3? Type90 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateDocumentsExtractResponse3? Type91 { get; set; }
+        public global::PredictionGuard.CreateEmbeddingsResponse? Type91 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateEmbeddingsResponse? Type92 { get; set; }
+        public global::PredictionGuard.CreateEmbeddingsResponse2? Type92 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateEmbeddingsResponse2? Type93 { get; set; }
+        public global::PredictionGuard.CreateEmbeddingsResponse3? Type93 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateEmbeddingsResponse3? Type94 { get; set; }
+        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateEmbeddingsResponseDataItem>? Type94 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateEmbeddingsResponseDataItem>? Type95 { get; set; }
+        public global::PredictionGuard.CreateEmbeddingsResponseDataItem? Type95 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateEmbeddingsResponseDataItem? Type96 { get; set; }
+        public global::System.Collections.Generic.IList<double>? Type96 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<double>? Type97 { get; set; }
+        public global::PredictionGuard.GetMcpServersResponse? Type97 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.GetMcpServersResponse? Type98 { get; set; }
+        public global::PredictionGuard.GetMcpServersResponse2? Type98 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.GetMcpServersResponse2? Type99 { get; set; }
+        public global::PredictionGuard.GetMcpServersResponse3? Type99 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.GetMcpServersResponse3? Type100 { get; set; }
+        public global::System.Collections.Generic.IList<global::PredictionGuard.GetMcpServersResponseDataItem>? Type100 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.GetMcpServersResponseDataItem>? Type101 { get; set; }
+        public global::PredictionGuard.GetMcpServersResponseDataItem? Type101 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.GetMcpServersResponseDataItem? Type102 { get; set; }
+        public global::PredictionGuard.GetMcpToolsResponse? Type102 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.GetMcpToolsResponse? Type103 { get; set; }
+        public global::PredictionGuard.GetMcpToolsResponse2? Type103 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.GetMcpToolsResponse2? Type104 { get; set; }
+        public global::PredictionGuard.GetMcpToolsResponse3? Type104 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.GetMcpToolsResponse3? Type105 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.IList<global::PredictionGuard.GetMcpToolsResponseDataItem>>? Type105 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.IList<global::PredictionGuard.GetMcpToolsResponseDataItem>>? Type106 { get; set; }
+        public global::System.Collections.Generic.IList<global::PredictionGuard.GetMcpToolsResponseDataItem>? Type106 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.GetMcpToolsResponseDataItem>? Type107 { get; set; }
+        public global::PredictionGuard.GetMcpToolsResponseDataItem? Type107 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.GetMcpToolsResponseDataItem? Type108 { get; set; }
+        public global::PredictionGuard.GetModelsResponse? Type108 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.GetModelsResponse? Type109 { get; set; }
+        public global::PredictionGuard.GetModelsResponse2? Type109 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.GetModelsResponse2? Type110 { get; set; }
+        public global::PredictionGuard.GetModelsResponse3? Type110 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.GetModelsResponse3? Type111 { get; set; }
+        public global::System.Collections.Generic.IList<global::PredictionGuard.GetModelsResponseDataItem>? Type111 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.GetModelsResponseDataItem>? Type112 { get; set; }
+        public global::PredictionGuard.GetModelsResponseDataItem? Type112 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.GetModelsResponseDataItem? Type113 { get; set; }
+        public global::PredictionGuard.GetModelsResponseDataItemCapabilities? Type113 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.GetModelsResponseDataItemCapabilities? Type114 { get; set; }
+        public global::PredictionGuard.CreateRerankResponse? Type114 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateRerankResponse? Type115 { get; set; }
+        public global::PredictionGuard.CreateRerankResponse2? Type115 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateRerankResponse2? Type116 { get; set; }
+        public global::PredictionGuard.CreateRerankResponse3? Type116 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateRerankResponse3? Type117 { get; set; }
+        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateRerankResponseResult>? Type117 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateRerankResponseResult>? Type118 { get; set; }
+        public global::PredictionGuard.CreateRerankResponseResult? Type118 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateRerankResponseResult? Type119 { get; set; }
+        public global::PredictionGuard.CreateResponsesResponse? Type119 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateResponsesResponse? Type120 { get; set; }
+        public global::PredictionGuard.CreateResponsesResponse2? Type120 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateResponsesResponse2? Type121 { get; set; }
+        public global::PredictionGuard.CreateResponsesResponse3? Type121 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateResponsesResponse3? Type122 { get; set; }
+        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateResponsesResponseOutputItem>? Type122 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateResponsesResponseOutputItem>? Type123 { get; set; }
+        public global::PredictionGuard.CreateResponsesResponseOutputItem? Type123 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateResponsesResponseOutputItem? Type124 { get; set; }
+        public global::PredictionGuard.CreateResponsesResponseOutputItemContent? Type124 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateResponsesResponseOutputItemContent? Type125 { get; set; }
+        public global::PredictionGuard.CreateInjectionResponse? Type125 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateFactualityResponse? Type126 { get; set; }
+        public global::PredictionGuard.CreateInjectionResponse2? Type126 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateFactualityResponse2? Type127 { get; set; }
+        public global::PredictionGuard.CreateInjectionResponse3? Type127 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateFactualityResponse3? Type128 { get; set; }
+        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateInjectionResponseCheck>? Type128 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateFactualityResponseCheck>? Type129 { get; set; }
+        public global::PredictionGuard.CreateInjectionResponseCheck? Type129 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateFactualityResponseCheck? Type130 { get; set; }
+        public global::PredictionGuard.CreatePiiResponse? Type130 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateInjectionResponse? Type131 { get; set; }
+        public global::PredictionGuard.CreatePiiResponse2? Type131 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateInjectionResponse2? Type132 { get; set; }
+        public global::PredictionGuard.CreatePiiResponse3? Type132 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateInjectionResponse3? Type133 { get; set; }
+        public global::System.Collections.Generic.IList<global::PredictionGuard.CreatePiiResponseCheck>? Type133 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateInjectionResponseCheck>? Type134 { get; set; }
+        public global::PredictionGuard.CreatePiiResponseCheck? Type134 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateInjectionResponseCheck? Type135 { get; set; }
+        public global::System.Collections.Generic.IList<global::PredictionGuard.CreatePiiResponseCheckPiiTypeAndPosition>? Type135 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreatePiiResponse? Type136 { get; set; }
+        public global::PredictionGuard.CreatePiiResponseCheckPiiTypeAndPosition? Type136 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreatePiiResponse2? Type137 { get; set; }
+        public global::PredictionGuard.CreateToxicityResponse? Type137 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreatePiiResponse3? Type138 { get; set; }
+        public global::PredictionGuard.CreateToxicityResponse2? Type138 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.CreatePiiResponseCheck>? Type139 { get; set; }
+        public global::PredictionGuard.CreateToxicityResponse3? Type139 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreatePiiResponseCheck? Type140 { get; set; }
+        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateToxicityResponseCheck>? Type140 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.CreatePiiResponseCheckPiiTypeAndPosition>? Type141 { get; set; }
+        public global::PredictionGuard.CreateToxicityResponseCheck? Type141 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreatePiiResponseCheckPiiTypeAndPosition? Type142 { get; set; }
+        public global::PredictionGuard.CreateTokenizeResponse? Type142 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateToxicityResponse? Type143 { get; set; }
+        public global::PredictionGuard.CreateTokenizeResponse2? Type143 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateToxicityResponse2? Type144 { get; set; }
+        public global::PredictionGuard.CreateTokenizeResponse3? Type144 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateToxicityResponse3? Type145 { get; set; }
+        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateTokenizeResponseToken>? Type145 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateToxicityResponseCheck>? Type146 { get; set; }
+        public global::PredictionGuard.CreateTokenizeResponseToken? Type146 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateToxicityResponseCheck? Type147 { get; set; }
+        public global::PredictionGuard.CreateDetokenizeResponse? Type147 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateTokenizeResponse? Type148 { get; set; }
+        public global::PredictionGuard.CreateDetokenizeResponse2? Type148 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::PredictionGuard.CreateTokenizeResponse2? Type149 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::PredictionGuard.CreateTokenizeResponse3? Type150 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateTokenizeResponseToken>? Type151 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::PredictionGuard.CreateTokenizeResponseToken? Type152 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::PredictionGuard.CreateDetokenizeResponse? Type153 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::PredictionGuard.CreateDetokenizeResponse2? Type154 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::PredictionGuard.CreateDetokenizeResponse3? Type155 { get; set; }
+        public global::PredictionGuard.CreateDetokenizeResponse3? Type149 { get; set; }
 
         /// <summary>
         /// 
@@ -773,26 +749,22 @@ namespace PredictionGuard
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::PredictionGuard.CreateFactualityResponseCheck>? ListType30 { get; set; }
+        public global::System.Collections.Generic.List<global::PredictionGuard.CreateInjectionResponseCheck>? ListType30 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::PredictionGuard.CreateInjectionResponseCheck>? ListType31 { get; set; }
+        public global::System.Collections.Generic.List<global::PredictionGuard.CreatePiiResponseCheck>? ListType31 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::PredictionGuard.CreatePiiResponseCheck>? ListType32 { get; set; }
+        public global::System.Collections.Generic.List<global::PredictionGuard.CreatePiiResponseCheckPiiTypeAndPosition>? ListType32 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::PredictionGuard.CreatePiiResponseCheckPiiTypeAndPosition>? ListType33 { get; set; }
+        public global::System.Collections.Generic.List<global::PredictionGuard.CreateToxicityResponseCheck>? ListType33 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::PredictionGuard.CreateToxicityResponseCheck>? ListType34 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::PredictionGuard.CreateTokenizeResponseToken>? ListType35 { get; set; }
+        public global::System.Collections.Generic.List<global::PredictionGuard.CreateTokenizeResponseToken>? ListType34 { get; set; }
     }
 }

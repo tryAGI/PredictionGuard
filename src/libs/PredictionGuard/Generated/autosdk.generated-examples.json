@@ -17,7 +17,7 @@
       "Slug": "chat-completions",
       "Description": "Generate chat completions based on a conversation history.",
       "Language": "csharp",
-      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateChatCompletionsRequest\u003E(\n    @\u0022{\n  \u0022\u0022model\u0022\u0022: \u0022\u0022{{TEXT_MODEL}}\u0022\u0022,\n  \u0022\u0022messages\u0022\u0022: [\n    {\n      \u0022\u0022role\u0022\u0022: \u0022\u0022user\u0022\u0022,\n      \u0022\u0022content\u0022\u0022: \u0022\u0022How do you feel about the world in general?\u0022\u0022\n    }\n  ],\n  \u0022\u0022max_completion_tokens\u0022\u0022: 1000,\n  \u0022\u0022frequency_penalty\u0022\u0022: 0.1,\n  \u0022\u0022logit_bias\u0022\u0022: {\n    \u0022\u0022128000\u0022\u0022: 10\n  },\n  \u0022\u0022parallel_tool_calls\u0022\u0022: false,\n  \u0022\u0022presence_penalty\u0022\u0022: 0.1,\n  \u0022\u0022reasoning_effort\u0022\u0022: \u0022\u0022medium\u0022\u0022,\n  \u0022\u0022stop\u0022\u0022: \u0022\u0022hello\u0022\u0022,\n  \u0022\u0022temperature\u0022\u0022: 1.0,\n  \u0022\u0022top_p\u0022\u0022: 1.0,\n  \u0022\u0022top_k\u0022\u0022: 50,\n  \u0022\u0022output\u0022\u0022: {\n    \u0022\u0022factuality\u0022\u0022: true,\n    \u0022\u0022toxicity\u0022\u0022: true\n  },\n  \u0022\u0022input\u0022\u0022: {\n    \u0022\u0022pii\u0022\u0022: \u0022\u0022replace\u0022\u0022,\n    \u0022\u0022pii_replace_method\u0022\u0022: \u0022\u0022random\u0022\u0022\n  }\n}\u0022)!;\n\nvar response = await client.CreateChatCompletionsAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022chat-d079eca8-1d6a-451a-a4ac-b0fea1e11a96\u0022,\n//   \u0022object\u0022: \u0022chat.completion\u0022,\n//   \u0022created\u0022: 1727890629,\n//   \u0022model\u0022: \u0022{{TEXT_MODEL}}\u0022,\n//   \u0022choices\u0022: [\n//     {\n//       \u0022index\u0022: 0,\n//       \u0022message\u0022: {\n//         \u0022role\u0022: \u0022assistant\u0022,\n//         \u0022content\u0022: \u0022I feel that the world in general is a complex and ever-evolving place. It has its fair share of beauty, challenges, and opportunities. There are moments of joy, connection, and growth, as well as pain, conflict, and loss. The world is a reflection of the people who inhabit it, and it\\u0027s essential to maintain a balance between appreciating its wonders and working towards making it a better place for all. It\\u0027s a constant journey of learning, adapting, and striving for a more harmonious existence.\u0022,\n//         \u0022reasoning\u0022: \u0022User is asking about how I feel about the world. This is a simple question. No tool call needed.\u0022\n//       }\n//     }\n//   ]\n// }",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateChatCompletionsRequest\u003E(\n    @\u0022{\n  \u0022\u0022model\u0022\u0022: \u0022\u0022{{TEXT_MODEL}}\u0022\u0022,\n  \u0022\u0022messages\u0022\u0022: [\n    {\n      \u0022\u0022role\u0022\u0022: \u0022\u0022user\u0022\u0022,\n      \u0022\u0022content\u0022\u0022: \u0022\u0022How do you feel about the world in general?\u0022\u0022\n    }\n  ],\n  \u0022\u0022max_completion_tokens\u0022\u0022: 1000,\n  \u0022\u0022frequency_penalty\u0022\u0022: 0.1,\n  \u0022\u0022logit_bias\u0022\u0022: {\n    \u0022\u0022128000\u0022\u0022: 10\n  },\n  \u0022\u0022parallel_tool_calls\u0022\u0022: false,\n  \u0022\u0022presence_penalty\u0022\u0022: 0.1,\n  \u0022\u0022reasoning_effort\u0022\u0022: \u0022\u0022medium\u0022\u0022,\n  \u0022\u0022stop\u0022\u0022: \u0022\u0022hello\u0022\u0022,\n  \u0022\u0022temperature\u0022\u0022: 1.0,\n  \u0022\u0022top_p\u0022\u0022: 1.0,\n  \u0022\u0022top_k\u0022\u0022: 50,\n  \u0022\u0022output\u0022\u0022: {\n    \u0022\u0022toxicity\u0022\u0022: true\n  },\n  \u0022\u0022input\u0022\u0022: {\n    \u0022\u0022pii\u0022\u0022: \u0022\u0022replace\u0022\u0022,\n    \u0022\u0022pii_replace_method\u0022\u0022: \u0022\u0022random\u0022\u0022\n  }\n}\u0022)!;\n\nvar response = await client.CreateChatCompletionsAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022chat-d079eca8-1d6a-451a-a4ac-b0fea1e11a96\u0022,\n//   \u0022object\u0022: \u0022chat.completion\u0022,\n//   \u0022created\u0022: 1727890629,\n//   \u0022model\u0022: \u0022{{TEXT_MODEL}}\u0022,\n//   \u0022choices\u0022: [\n//     {\n//       \u0022index\u0022: 0,\n//       \u0022message\u0022: {\n//         \u0022role\u0022: \u0022assistant\u0022,\n//         \u0022content\u0022: \u0022I feel that the world in general is a complex and ever-evolving place. It has its fair share of beauty, challenges, and opportunities. There are moments of joy, connection, and growth, as well as pain, conflict, and loss. The world is a reflection of the people who inhabit it, and it\\u0027s essential to maintain a balance between appreciating its wonders and working towards making it a better place for all. It\\u0027s a constant journey of learning, adapting, and striving for a more harmonious existence.\u0022,\n//         \u0022reasoning\u0022: \u0022User is asking about how I feel about the world. This is a simple question. No tool call needed.\u0022\n//       }\n//     }\n//   ]\n// }",
       "Format": "sdk",
       "OperationId": "createChatCompletions",
       "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
@@ -28,7 +28,7 @@
       "Slug": "completions",
       "Description": "Retrieve text completions based on the provided input.",
       "Language": "csharp",
-      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateCompletionsRequest\u003E(\n    @\u0022{\n  \u0022\u0022model\u0022\u0022: \u0022\u0022{{TEXT_MODEL}}\u0022\u0022,\n  \u0022\u0022prompt\u0022\u0022: \u0022\u0022Will I lose my hair?\u0022\u0022,\n  \u0022\u0022max_tokens\u0022\u0022: 1000,\n  \u0022\u0022frequency_penalty\u0022\u0022: 0.1,\n  \u0022\u0022logit_bias\u0022\u0022: {\n    \u0022\u0022128000\u0022\u0022: 10\n  },\n  \u0022\u0022presence_penalty\u0022\u0022: 0.1,\n  \u0022\u0022stop\u0022\u0022: \u0022\u0022hello\u0022\u0022,\n  \u0022\u0022temperature\u0022\u0022: 1.0,\n  \u0022\u0022top_p\u0022\u0022: 1.0,\n  \u0022\u0022top_k\u0022\u0022: 50,\n  \u0022\u0022output\u0022\u0022: {\n    \u0022\u0022factuality\u0022\u0022: true,\n    \u0022\u0022toxicity\u0022\u0022: true\n  },\n  \u0022\u0022input\u0022\u0022: {\n    \u0022\u0022pii\u0022\u0022: \u0022\u0022replace\u0022\u0022,\n    \u0022\u0022pii_replace_method\u0022\u0022: \u0022\u0022random\u0022\u0022\n  }\n}\u0022)!;\n\nvar response = await client.CreateCompletionsAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022cmpl-d20e5639-ed8d-48b2-a403-08fe0fdc7add\u0022,\n//   \u0022object\u0022: \u0022text_completion\u0022,\n//   \u0022created\u0022: 1727889988,\n//   \u0022model\u0022: \u0022{{TEXT_MODEL}}\u0022,\n//   \u0022choices\u0022: [\n//     {\n//       \u0022index\u0022: 0,\n//       \u0022text\u0022: \u0022Most people lose some hair every day. It\\u0027s a natural process called shedding. On average, you can lose 50-100 strands of hair a day. However, if you notice an increase in hair loss or if you are experiencing hair loss in large clumps, then it could be a sign of an underlying condition. Hair loss can be triggered by a number of factors such as stress, illness, hormone imbalance, medication, and genetics.\\nIf you\\u0027re concerned about hair loss, you should consult with a trichologist, a hair and scalp specialist. They can help determine the cause of your hair loss and recommend the appropriate treatment.\u0022\n//     }\n//   ]\n// }",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateCompletionsRequest\u003E(\n    @\u0022{\n  \u0022\u0022model\u0022\u0022: \u0022\u0022{{TEXT_MODEL}}\u0022\u0022,\n  \u0022\u0022prompt\u0022\u0022: \u0022\u0022Will I lose my hair?\u0022\u0022,\n  \u0022\u0022max_tokens\u0022\u0022: 1000,\n  \u0022\u0022frequency_penalty\u0022\u0022: 0.1,\n  \u0022\u0022logit_bias\u0022\u0022: {\n    \u0022\u0022128000\u0022\u0022: 10\n  },\n  \u0022\u0022presence_penalty\u0022\u0022: 0.1,\n  \u0022\u0022stop\u0022\u0022: \u0022\u0022hello\u0022\u0022,\n  \u0022\u0022temperature\u0022\u0022: 1.0,\n  \u0022\u0022top_p\u0022\u0022: 1.0,\n  \u0022\u0022top_k\u0022\u0022: 50,\n  \u0022\u0022output\u0022\u0022: {\n    \u0022\u0022toxicity\u0022\u0022: true\n  },\n  \u0022\u0022input\u0022\u0022: {\n    \u0022\u0022pii\u0022\u0022: \u0022\u0022replace\u0022\u0022,\n    \u0022\u0022pii_replace_method\u0022\u0022: \u0022\u0022random\u0022\u0022\n  }\n}\u0022)!;\n\nvar response = await client.CreateCompletionsAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022cmpl-d20e5639-ed8d-48b2-a403-08fe0fdc7add\u0022,\n//   \u0022object\u0022: \u0022text_completion\u0022,\n//   \u0022created\u0022: 1727889988,\n//   \u0022model\u0022: \u0022{{TEXT_MODEL}}\u0022,\n//   \u0022choices\u0022: [\n//     {\n//       \u0022index\u0022: 0,\n//       \u0022text\u0022: \u0022Most people lose some hair every day. It\\u0027s a natural process called shedding. On average, you can lose 50-100 strands of hair a day. However, if you notice an increase in hair loss or if you are experiencing hair loss in large clumps, then it could be a sign of an underlying condition. Hair loss can be triggered by a number of factors such as stress, illness, hormone imbalance, medication, and genetics.\\nIf you\\u0027re concerned about hair loss, you should consult with a trichologist, a hair and scalp specialist. They can help determine the cause of your hair loss and recommend the appropriate treatment.\u0022\n//     }\n//   ]\n// }",
       "Format": "sdk",
       "OperationId": "createCompletions",
       "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
@@ -68,17 +68,6 @@
     },
     {
       "Order": 7,
-      "Title": "Factuality",
-      "Slug": "factuality",
-      "Description": "Check the factuality of a given text compared to a reference.",
-      "Language": "csharp",
-      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateFactualityRequest\u003E(\n    @\u0022{\n  \u0022\u0022reference\u0022\u0022: \u0022\u0022The President shall receive in full for his services during the term for which he shall have been elected compensation in the aggregate amount of 400,000 a year, to be paid monthly, and in addition an expense allowance of 50,000 to assist in defraying expenses relating to or resulting from the discharge of his official duties.\u0022\u0022,\n  \u0022\u0022text\u0022\u0022: \u0022\u0022The president of the united states can take a salary of one million dollars\u0022\u0022\n}\u0022)!;\n\nvar response = await client.CreateFactualityAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022fact-3262157b-1ff2-4d78-8365-c2dcac56cadd\u0022,\n//   \u0022object\u0022: \u0022factuality.check\u0022,\n//   \u0022created\u0022: 1727891187,\n//   \u0022checks\u0022: [\n//     {\n//       \u0022index\u0022: 0,\n//       \u0022score\u0022: 0.7879657745361328\n//     }\n//   ]\n// }",
-      "Format": "sdk",
-      "OperationId": "createFactuality",
-      "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
-    },
-    {
-      "Order": 8,
       "Title": "Injection",
       "Slug": "injection",
       "Description": "Injection detects potential prompt injection attacks.",
@@ -89,7 +78,7 @@
       "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 9,
+      "Order": 8,
       "Title": "PII",
       "Slug": "pii",
       "Description": "Replace personal information such as names, SSNs, and emails in a given text.",
@@ -100,7 +89,7 @@
       "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 10,
+      "Order": 9,
       "Title": "Rerank",
       "Slug": "rerank",
       "Description": "Rerank sorts text inputs by semantic relevance to a specified query.",
@@ -111,18 +100,18 @@
       "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 11,
+      "Order": 10,
       "Title": "Responses",
       "Slug": "responses",
       "Description": "Generate responses while also allowing for the utilization of various tools.",
       "Language": "csharp",
-      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateResponsesRequest\u003E(\n    @\u0022{\n  \u0022\u0022model\u0022\u0022: \u0022\u0022{{TEXT_MODEL}}\u0022\u0022,\n  \u0022\u0022input\u0022\u0022: \u0022\u0022Tell me a joke.\u0022\u0022,\n  \u0022\u0022safeguards\u0022\u0022: {\n    \u0022\u0022pii\u0022\u0022: \u0022\u0022replace\u0022\u0022,\n    \u0022\u0022pii_replace_method\u0022\u0022: \u0022\u0022random\u0022\u0022,\n    \u0022\u0022factuality\u0022\u0022: true,\n    \u0022\u0022toxicity\u0022\u0022: true\n  }\n}\u0022)!;\n\nvar response = await client.CreateResponsesAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022resp_1196c27e58374675881efa613574ea7a\u0022,\n//   \u0022object\u0022: \u0022response\u0022,\n//   \u0022created_at\u0022: 1727890629,\n//   \u0022status\u0022: \u0022completed\u0022,\n//   \u0022model\u0022: \u0022{{TEXT_MODEL}}\u0022,\n//   \u0022output\u0022: [\n//     {\n//       \u0022content\u0022: {\n//         \u0022type\u0022: \u0022output_text\u0022,\n//         \u0022text\u0022: \u0022Why did the scarecrow win an award?\\n\\nBecause he was outstanding in his field!\u0022\n//       }\n//     }\n//   ]\n// }",
+      "Code": "using var client = new PredictionGuardClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::PredictionGuard.CreateResponsesRequest\u003E(\n    @\u0022{\n  \u0022\u0022model\u0022\u0022: \u0022\u0022{{TEXT_MODEL}}\u0022\u0022,\n  \u0022\u0022input\u0022\u0022: \u0022\u0022Tell me a joke.\u0022\u0022,\n  \u0022\u0022safeguards\u0022\u0022: {\n    \u0022\u0022pii\u0022\u0022: \u0022\u0022replace\u0022\u0022,\n    \u0022\u0022pii_replace_method\u0022\u0022: \u0022\u0022random\u0022\u0022,\n    \u0022\u0022toxicity\u0022\u0022: true\n  }\n}\u0022)!;\n\nvar response = await client.CreateResponsesAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022resp_1196c27e58374675881efa613574ea7a\u0022,\n//   \u0022object\u0022: \u0022response\u0022,\n//   \u0022created_at\u0022: 1727890629,\n//   \u0022status\u0022: \u0022completed\u0022,\n//   \u0022model\u0022: \u0022{{TEXT_MODEL}}\u0022,\n//   \u0022output\u0022: [\n//     {\n//       \u0022content\u0022: {\n//         \u0022type\u0022: \u0022output_text\u0022,\n//         \u0022text\u0022: \u0022Why did the scarecrow win an award?\\n\\nBecause he was outstanding in his field!\u0022\n//       }\n//     }\n//   ]\n// }",
       "Format": "sdk",
       "OperationId": "createResponses",
       "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 12,
+      "Order": 11,
       "Title": "Tokenize",
       "Slug": "tokenize",
       "Description": "Generates tokens for a string using a model\u0027s tokenizer.",
@@ -133,7 +122,7 @@
       "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 13,
+      "Order": 12,
       "Title": "Toxicity",
       "Slug": "toxicity",
       "Description": "Check the toxicity of a given text.",
@@ -144,7 +133,7 @@
       "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 14,
+      "Order": 13,
       "Title": "MCP Servers",
       "Slug": "mcp-servers",
       "Description": "Return available MCP servers and tools included in those servers along with relevant metadata.",
@@ -155,7 +144,7 @@
       "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 15,
+      "Order": 14,
       "Title": "MCP Tools",
       "Slug": "mcp-tools",
       "Description": "Return available MCP tools by server with parameters and any relevant metadata.",
@@ -166,7 +155,7 @@
       "Setup": "This example assumes \u0060using PredictionGuard;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 16,
+      "Order": 15,
       "Title": "Models",
       "Slug": "models",
       "Description": "Return available models for an endpoint and relevant metadata for them.",

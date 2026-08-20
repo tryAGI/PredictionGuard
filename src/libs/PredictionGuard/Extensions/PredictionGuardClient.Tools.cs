@@ -8,31 +8,6 @@ namespace PredictionGuard;
 public static class PredictionGuardToolExtensions
 {
     /// <summary>
-    /// Creates an <see cref="AIFunction"/> that checks the factuality of text
-    /// compared to a reference, suitable for use as a tool with any IChatClient.
-    /// </summary>
-    /// <param name="client">The Prediction Guard client.</param>
-    /// <returns>An AIFunction that can be passed to ChatOptions.Tools.</returns>
-    [CLSCompliant(false)]
-    public static AIFunction AsFactualityCheckTool(this PredictionGuardClient client)
-    {
-        ArgumentNullException.ThrowIfNull(client);
-
-        return AIFunctionFactory.Create(
-            async (string text, string reference, CancellationToken cancellationToken) =>
-            {
-                var response = await client.CreateFactualityAsync(
-                    reference: reference,
-                    text: text,
-                    cancellationToken: cancellationToken).ConfigureAwait(false);
-
-                return FormatFactualityResponse(response);
-            },
-            name: "PredictionGuardFactualityCheck",
-            description: "Checks the factuality of a given text by comparing it against a reference text. Returns a factuality score between 0 and 1, where higher scores indicate greater factual consistency.");
-    }
-
-    /// <summary>
     /// Creates an <see cref="AIFunction"/> that checks text for toxicity,
     /// suitable for use as a tool with any IChatClient.
     /// </summary>
@@ -110,25 +85,6 @@ public static class PredictionGuardToolExtensions
             },
             name: "PredictionGuardInjectionDetection",
             description: "Detects potential prompt injection attacks in the given text. Returns a probability score between 0 and 1, where higher scores indicate a higher likelihood of prompt injection.");
-    }
-
-    private static string FormatFactualityResponse(CreateFactualityResponse3 response)
-    {
-        var parts = new List<string> { "Factuality Check:" };
-
-        if (response.Checks is { Count: > 0 })
-        {
-            foreach (var check in response.Checks)
-            {
-                parts.Add($"- Score: {check.Score:F4} (0 = not factual, 1 = fully factual)");
-            }
-        }
-        else
-        {
-            parts.Add("- No factuality results returned.");
-        }
-
-        return string.Join("\n", parts);
     }
 
     private static string FormatToxicityResponse(CreateToxicityResponse3 response)

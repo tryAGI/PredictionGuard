@@ -36,7 +36,7 @@ spec_names=(
 for spec_name in "${spec_names[@]}"; do
   fetch_spec \
     -o "$spec_dir/$spec_name.yaml" \
-    "https://raw.githubusercontent.com/predictionguard/docs/main/fern/openapi/$spec_name.yaml"
+    "https://raw.githubusercontent.com/predictionguard/docs-saas/main/fern/openapi/$spec_name.yaml"
 done
 
 # Fix the spec:

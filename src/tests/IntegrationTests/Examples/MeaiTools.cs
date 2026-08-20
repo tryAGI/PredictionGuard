@@ -8,20 +8,8 @@ public partial class Tests
 {
     //// PredictionGuard provides AIFunction tools that can be used with any
     //// `Microsoft.Extensions.AI.IChatClient` to give AI agents access to
-    //// safety guardrail capabilities like factuality checking, toxicity
-    //// detection, PII detection, and injection detection.
-
-    [TestMethod]
-    public async Task Meai_AsFactualityCheckTool()
-    {
-        using var client = GetAuthenticatedClient();
-
-        //// Create a tool for factuality checking:
-        var tool = client.AsFactualityCheckTool();
-
-        tool.Name.Should().Be("PredictionGuardFactualityCheck");
-        tool.Description.Should().Contain("factuality");
-    }
+    //// safety guardrail capabilities like toxicity detection, PII detection,
+    //// and injection detection.
 
     [TestMethod]
     public async Task Meai_AsToxicityCheckTool()

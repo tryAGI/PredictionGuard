@@ -426,9 +426,6 @@ paths:
                   type: object
                   description: Options to affect the output of the response.
                   properties:
-                    factuality:
-                      type: boolean
-                      description: Set to true to turn on factuality processing.
                     toxicity:
                       type: boolean
                       description: Set to true to turn on toxicity processing.
@@ -474,7 +471,6 @@ paths:
                   top_p: 1.0
                   top_k: 50
                   output:
-                    factuality: true
                     toxicity: true
                   input:
                     pii: replace
@@ -523,7 +519,6 @@ paths:
                   top_p: 1.0
                   top_k: 50
                   output:
-                    factuality: true
                     toxicity: true
                   input:
                     pii: replace
@@ -566,7 +561,6 @@ paths:
                   top_p: 1.0
                   top_k: 50
                   output:
-                    factuality: true
                     toxicity: true
                   input:
                     pii: replace
@@ -888,9 +882,6 @@ paths:
                   type: object
                   description: Options to affect the output of the response.
                   properties:
-                    factuality:
-                      type: boolean
-                      description: Set to true to turn on factuality processing.
                     toxicity:
                       type: boolean
                       description: Set to true to turn on toxicity processing.
@@ -929,7 +920,6 @@ paths:
                   top_p: 1.0
                   top_k: 50
                   output:
-                    factuality: true
                     toxicity: true
                   input:
                     pii: replace
@@ -949,7 +939,6 @@ paths:
                   top_p: 1.0
                   top_k: 50
                   output:
-                    factuality: true
                     toxicity: true
                   input:
                     pii: replace
@@ -1977,9 +1966,6 @@ paths:
                       items:
                       - type: string
                         description: An entity type that the PII check should ignore.
-                    factuality:
-                      type: boolean
-                      description: Set to true to turn on factuality processing.
                     toxicity:
                       type: boolean
                       description: Set to true to turn on toxicity processing.
@@ -1991,7 +1977,6 @@ paths:
                   safeguards:
                     pii: replace
                     pii_replace_method: random
-                    factuality: true
                     toxicity: true
               Image Input:
                 value:
@@ -2010,7 +1995,6 @@ paths:
                   safeguards:
                     pii: replace
                     pii_replace_method: random
-                    factuality: true
                     toxicity: true
               MCP Call:
                 value:
@@ -2057,7 +2041,6 @@ paths:
                   safeguards:
                     pii: replace
                     pii_replace_method: random
-                    factuality: true
                     toxicity: true
       responses:
         '403':
@@ -2376,100 +2359,6 @@ paths:
                             - fahrenheit
                         required:
                         - location
-      security:
-      - bearerAuth: []
-  "/factuality":
-    post:
-      summary: Factuality
-      description: Check the factuality of a given text compared to a reference.
-      requestBody:
-        content:
-          application/json:
-            schema:
-              required:
-              - reference
-              - text
-              type: object
-              properties:
-                reference:
-                  type: string
-                  description: The reference text for comparison.
-                text:
-                  type: string
-                  description: The text to be checked for factuality.
-            examples:
-              Basic:
-                value:
-                  reference: The President shall receive in full for his services
-                    during the term for which he shall have been elected compensation
-                    in the aggregate amount of 400,000 a year, to be paid monthly,
-                    and in addition an expense allowance of 50,000 to assist in defraying
-                    expenses relating to or resulting from the discharge of his official
-                    duties.
-                  text: The president of the united states can take a salary of one
-                    million dollars
-      responses:
-        '403':
-          description: Failed auth response.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  error:
-                    type: string
-                    description: Description of the error.
-              example:
-                error: api understands the request but refuses to authorize it
-        '400':
-          description: General error response.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  error:
-                    type: string
-                    description: Description of the error.
-              example:
-                error: required fields are missing
-        '200':
-          description: Successful response.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  id:
-                    type: string
-                    description: Unique ID for the factuality check.
-                  object:
-                    type: string
-                    description: Type of object (factuality.check).
-                  created:
-                    type: integer
-                    description: Timestamp of when the factuality check was created.
-                  checks:
-                    type: array
-                    description: The set of vectorized data.
-                    items:
-                      type: object
-                      properties:
-                        index:
-                          type: integer
-                          description: The index position in the collection.
-                        score:
-                          type: number
-                          description: The factuality score.
-              examples:
-                Basic:
-                  value:
-                    id: fact-3262157b-1ff2-4d78-8365-c2dcac56cadd
-                    object: factuality.check
-                    created: 1727891187
-                    checks:
-                    - index: 0
-                      score: 0.7879657745361328
       security:
       - bearerAuth: []
   "/injection":

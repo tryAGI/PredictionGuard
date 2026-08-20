@@ -9,20 +9,6 @@ public partial class Tests
     //// guardrail endpoints directly.
 
     [TestMethod]
-    public async Task Guardrails_Factuality()
-    {
-        using var client = GetAuthenticatedClient();
-
-        //// Check factuality of a statement against a reference:
-        var response = await client.CreateFactualityAsync(
-            reference: "The capital of France is Paris.",
-            text: "Paris is the capital of France.");
-
-        response.Should().NotBeNull();
-        response.Checks.Should().NotBeNullOrEmpty();
-    }
-
-    [TestMethod]
     public async Task Guardrails_Toxicity()
     {
         using var client = GetAuthenticatedClient();

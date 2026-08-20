@@ -33,12 +33,6 @@ namespace PredictionGuard
         public byte[]? EntityList { get; set; }
 
         /// <summary>
-        /// Set to true to turn on factuality processing.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("factuality")]
-        public bool? Factuality { get; set; }
-
-        /// <summary>
         /// Set to true to turn on toxicity processing.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("toxicity")]
@@ -65,9 +59,6 @@ namespace PredictionGuard
         /// <param name="entityList">
         /// An array of entity types that the PII check should ignore.
         /// </param>
-        /// <param name="factuality">
-        /// Set to true to turn on factuality processing.
-        /// </param>
         /// <param name="toxicity">
         /// Set to true to turn on toxicity processing.
         /// </param>
@@ -79,14 +70,12 @@ namespace PredictionGuard
             string? pii,
             string? piiReplaceMethod,
             byte[]? entityList,
-            bool? factuality,
             bool? toxicity)
         {
             this.BlockPromptInjection = blockPromptInjection;
             this.Pii = pii;
             this.PiiReplaceMethod = piiReplaceMethod;
             this.EntityList = entityList;
-            this.Factuality = factuality;
             this.Toxicity = toxicity;
         }
 

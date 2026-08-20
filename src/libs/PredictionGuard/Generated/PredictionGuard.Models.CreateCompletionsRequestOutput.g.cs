@@ -9,12 +9,6 @@ namespace PredictionGuard
     public sealed partial class CreateCompletionsRequestOutput
     {
         /// <summary>
-        /// Set to true to turn on factuality processing.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("factuality")]
-        public bool? Factuality { get; set; }
-
-        /// <summary>
         /// Set to true to turn on toxicity processing.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("toxicity")]
@@ -29,9 +23,6 @@ namespace PredictionGuard
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCompletionsRequestOutput" /> class.
         /// </summary>
-        /// <param name="factuality">
-        /// Set to true to turn on factuality processing.
-        /// </param>
         /// <param name="toxicity">
         /// Set to true to turn on toxicity processing.
         /// </param>
@@ -39,10 +30,8 @@ namespace PredictionGuard
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateCompletionsRequestOutput(
-            bool? factuality,
             bool? toxicity)
         {
-            this.Factuality = factuality;
             this.Toxicity = toxicity;
         }
 
