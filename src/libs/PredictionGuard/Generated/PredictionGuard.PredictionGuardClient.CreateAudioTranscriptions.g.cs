@@ -205,46 +205,6 @@ namespace PredictionGuard
 
 
                             var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
-                            if (toxicity != default)
-                            {
-
-                                __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(toxicity, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
-                                    name: "\"Toxicity\"");
-
-                            }
-                            if (pii != default)
-                            {
-
-                                __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent(pii ?? string.Empty),
-                                    name: "\"Pii\"");
-
-                            }
-                            if (replaceMethod != default)
-                            {
-
-                                __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent(replaceMethod ?? string.Empty),
-                                    name: "\"Replace-Method\"");
-
-                            }
-                            if (entityList != default)
-                            {
-
-                                __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"[{string.Join(",", global::System.Linq.Enumerable.Select(entityList, x => x))}]"),
-                                    name: "\"Entity-List\"");
-
-                            }
-                            if (injection != default)
-                            {
-
-                                __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(injection, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
-                                    name: "\"Injection\"");
-
-                            }
                             __httpRequestContent.Add(
                                 content: new global::System.Net.Http.StringContent(request.Model ?? string.Empty),
                                 name: "\"model\"");
@@ -945,46 +905,6 @@ namespace PredictionGuard
 
 
                             var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
-                            if (toxicity != default)
-                            {
-
-                                __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(toxicity, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
-                                    name: "\"Toxicity\"");
-
-                            }
-                            if (pii != default)
-                            {
-
-                                __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent(pii ?? string.Empty),
-                                    name: "\"Pii\"");
-
-                            }
-                            if (replaceMethod != default)
-                            {
-
-                                __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent(replaceMethod ?? string.Empty),
-                                    name: "\"Replace-Method\"");
-
-                            }
-                            if (entityList != default)
-                            {
-
-                                __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"[{string.Join(",", global::System.Linq.Enumerable.Select(entityList, x => x))}]"),
-                                    name: "\"Entity-List\"");
-
-                            }
-                            if (injection != default)
-                            {
-
-                                __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(injection, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
-                                    name: "\"Injection\"");
-
-                            }
                             __httpRequestContent.Add(
                                 content: new global::System.Net.Http.StringContent(request.Model ?? string.Empty),
                                 name: "\"model\"");
@@ -1596,46 +1516,6 @@ namespace PredictionGuard
 
 
                             var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
-                            if (toxicity != default)
-                            {
-
-                                __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(toxicity, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
-                                    name: "\"Toxicity\"");
-
-                            }
-                            if (pii != default)
-                            {
-
-                                __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent(pii ?? string.Empty),
-                                    name: "\"Pii\"");
-
-                            }
-                            if (replaceMethod != default)
-                            {
-
-                                __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent(replaceMethod ?? string.Empty),
-                                    name: "\"Replace-Method\"");
-
-                            }
-                            if (entityList != default)
-                            {
-
-                                __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"[{string.Join(",", global::System.Linq.Enumerable.Select(entityList, x => x))}]"),
-                                    name: "\"Entity-List\"");
-
-                            }
-                            if (injection != default)
-                            {
-
-                                __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(injection, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
-                                    name: "\"Injection\"");
-
-                            }
                             __httpRequestContent.Add(
                                 content: new global::System.Net.Http.StringContent(request.Model ?? string.Empty),
                                 name: "\"model\"");
