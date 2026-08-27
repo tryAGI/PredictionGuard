@@ -20,7 +20,7 @@ namespace PredictionGuard.JsonConverters
                     {
                         return global::PredictionGuard.GetModelsCapabilityExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

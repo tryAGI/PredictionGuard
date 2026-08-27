@@ -179,7 +179,7 @@ namespace PredictionGuard
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
 
             if (toxicity != default)
@@ -879,7 +879,7 @@ namespace PredictionGuard
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
 
             if (toxicity != default)
@@ -1490,7 +1490,7 @@ namespace PredictionGuard
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
 
             if (toxicity != default)

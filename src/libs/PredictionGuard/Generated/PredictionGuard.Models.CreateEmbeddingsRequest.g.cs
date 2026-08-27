@@ -4,7 +4,7 @@
 namespace PredictionGuard
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateEmbeddingsRequest
     {
@@ -16,7 +16,7 @@ namespace PredictionGuard
         public required string Model { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("input")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::PredictionGuard.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<global::PredictionGuard.OneOf<string, int?, global::System.Collections.Generic.IList<int>, global::PredictionGuard.CreateEmbeddingsRequestInputVariant2Item>>>))]

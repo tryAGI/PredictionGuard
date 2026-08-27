@@ -9,13 +9,13 @@ namespace PredictionGuard
     public sealed partial class CreateResponsesRequestToolChoice
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string? Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
         public string? Mode { get; set; }

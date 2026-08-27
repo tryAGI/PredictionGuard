@@ -11,7 +11,7 @@ namespace PredictionGuard
     public sealed partial class PredictionGuardClient : global::PredictionGuard.IPredictionGuardClient, global::System.IDisposable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public const string DefaultBaseUrl = "https://api.predictionguard.com/";
 
@@ -38,7 +38,7 @@ namespace PredictionGuard
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::PredictionGuard.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {

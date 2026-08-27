@@ -4,7 +4,7 @@
 namespace PredictionGuard
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateChatCompletionsRequestMessagesVariant2ItemContentVariant2Item
     {
@@ -21,7 +21,7 @@ namespace PredictionGuard
         public string? Text { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("image_url")]
         public global::PredictionGuard.CreateChatCompletionsRequestMessagesVariant2ItemContentVariant2ItemImageUrl? ImageUrl { get; set; }
