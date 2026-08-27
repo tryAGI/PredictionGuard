@@ -138,7 +138,7 @@ namespace PredictionGuard
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::PredictionGuard.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

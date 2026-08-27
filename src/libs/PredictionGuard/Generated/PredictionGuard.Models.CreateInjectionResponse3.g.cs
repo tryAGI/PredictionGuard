@@ -4,7 +4,7 @@
 namespace PredictionGuard
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateInjectionResponse3
     {

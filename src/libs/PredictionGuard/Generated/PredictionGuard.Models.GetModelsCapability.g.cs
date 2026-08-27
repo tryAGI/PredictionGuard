@@ -9,43 +9,43 @@ namespace PredictionGuard
     public enum GetModelsCapability
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatCompletion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatWithImage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Completion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Detokenize,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Embedding,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EmbeddingWithImage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Reasoning,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rerank,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tokenize,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolCalling,
     }

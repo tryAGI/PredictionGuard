@@ -4,7 +4,7 @@
 namespace PredictionGuard
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateCompletionsRequest
     {
@@ -16,7 +16,7 @@ namespace PredictionGuard
         public required string Model { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prompt")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::PredictionGuard.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>))]
@@ -48,7 +48,7 @@ namespace PredictionGuard
         public double? PresencePenalty { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("stop")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::PredictionGuard.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>))]

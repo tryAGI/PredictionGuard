@@ -4,7 +4,7 @@
 namespace PredictionGuard
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateResponsesRequest
     {
@@ -16,7 +16,7 @@ namespace PredictionGuard
         public required string Model { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("input")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::PredictionGuard.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<global::PredictionGuard.CreateResponsesRequestInputVariant2Item>>))]
@@ -72,7 +72,7 @@ namespace PredictionGuard
         public double? Temperature { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tool_choice")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::PredictionGuard.JsonConverters.OneOfJsonConverter<string, global::PredictionGuard.CreateResponsesRequestToolChoice>))]

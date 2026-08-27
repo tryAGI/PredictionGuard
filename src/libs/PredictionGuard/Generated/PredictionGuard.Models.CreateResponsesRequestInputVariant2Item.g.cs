@@ -4,7 +4,7 @@
 namespace PredictionGuard
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateResponsesRequestInputVariant2Item
     {
@@ -16,7 +16,7 @@ namespace PredictionGuard
         public required string Role { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("content")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::PredictionGuard.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<global::PredictionGuard.CreateResponsesRequestInputVariant2ItemContentVariant2Item>>))]
@@ -60,7 +60,7 @@ namespace PredictionGuard
         public string? Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("output")]
         public object? Output { get; set; }
