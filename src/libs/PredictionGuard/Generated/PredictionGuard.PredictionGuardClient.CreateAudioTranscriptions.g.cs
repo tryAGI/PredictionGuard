@@ -196,7 +196,7 @@ namespace PredictionGuard
             }
             if (entityList != default)
             {
-                __httpRequest.Headers.TryAddWithoutValidation("Entity-List", entityList.ToString());
+                __httpRequest.Headers.TryAddWithoutValidation("Entity-List", string.Join(",", global::System.Linq.Enumerable.Select(entityList, static __headerItem => __headerItem ?? string.Empty)));
             }
             if (injection != default)
             {
@@ -896,7 +896,7 @@ namespace PredictionGuard
             }
             if (entityList != default)
             {
-                __httpRequest.Headers.TryAddWithoutValidation("Entity-List", entityList.ToString());
+                __httpRequest.Headers.TryAddWithoutValidation("Entity-List", string.Join(",", global::System.Linq.Enumerable.Select(entityList, static __headerItem => __headerItem ?? string.Empty)));
             }
             if (injection != default)
             {
@@ -1507,7 +1507,7 @@ namespace PredictionGuard
             }
             if (entityList != default)
             {
-                __httpRequest.Headers.TryAddWithoutValidation("Entity-List", entityList.ToString());
+                __httpRequest.Headers.TryAddWithoutValidation("Entity-List", string.Join(",", global::System.Linq.Enumerable.Select(entityList, static __headerItem => __headerItem ?? string.Empty)));
             }
             if (injection != default)
             {
