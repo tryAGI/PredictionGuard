@@ -17,7 +17,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::PredictionGuard.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateDocumentsExtractResponse3> CreateDocumentsExtractAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateDocumentsExtractResponse> CreateDocumentsExtractAsync(
 
             global::PredictionGuard.CreateDocumentsExtractRequest request,
             bool? toxicity = default,
@@ -40,7 +40,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::PredictionGuard.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateDocumentsExtractResponse3>> CreateDocumentsExtractAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateDocumentsExtractResponse>> CreateDocumentsExtractAsResponseAsync(
 
             global::PredictionGuard.CreateDocumentsExtractRequest request,
             bool? toxicity = default,
@@ -83,7 +83,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateDocumentsExtractResponse3> CreateDocumentsExtractAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateDocumentsExtractResponse> CreateDocumentsExtractAsync(
             byte[] file,
             string filename,
             bool? toxicity = default,
@@ -132,7 +132,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::PredictionGuard.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateDocumentsExtractResponse3> CreateDocumentsExtractAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateDocumentsExtractResponse> CreateDocumentsExtractAsync(
             global::System.IO.Stream file,
             string filename,
             bool? toxicity = default,
@@ -180,7 +180,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::PredictionGuard.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateDocumentsExtractResponse3>> CreateDocumentsExtractAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateDocumentsExtractResponse>> CreateDocumentsExtractAsResponseAsync(
             global::System.IO.Stream file,
             string filename,
             bool? toxicity = default,
