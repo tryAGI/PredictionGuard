@@ -12,7 +12,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::PredictionGuard.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateInjectionResponse3> CreateInjectionAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateInjectionResponse> CreateInjectionAsync(
 
             global::PredictionGuard.CreateInjectionRequest request,
             global::PredictionGuard.AutoSDKRequestOptions? requestOptions = default,
@@ -25,7 +25,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::PredictionGuard.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateInjectionResponse3>> CreateInjectionAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateInjectionResponse>> CreateInjectionAsResponseAsync(
 
             global::PredictionGuard.CreateInjectionRequest request,
             global::PredictionGuard.AutoSDKRequestOptions? requestOptions = default,
@@ -41,7 +41,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateInjectionResponse3> CreateInjectionAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateInjectionResponse> CreateInjectionAsync(
             global::PredictionGuard.OneOf<string, global::System.Collections.Generic.IList<string>> prompt,
             bool detect,
             global::PredictionGuard.AutoSDKRequestOptions? requestOptions = default,

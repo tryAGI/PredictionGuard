@@ -12,7 +12,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::PredictionGuard.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateResponsesResponse3> CreateResponsesAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateResponsesResponse> CreateResponsesAsync(
 
             global::PredictionGuard.CreateResponsesRequest request,
             global::PredictionGuard.AutoSDKRequestOptions? requestOptions = default,
@@ -25,7 +25,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::PredictionGuard.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateResponsesResponse3>> CreateResponsesAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateResponsesResponse>> CreateResponsesAsResponseAsync(
 
             global::PredictionGuard.CreateResponsesRequest request,
             global::PredictionGuard.AutoSDKRequestOptions? requestOptions = default,
@@ -75,7 +75,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateResponsesResponse3> CreateResponsesAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateResponsesResponse> CreateResponsesAsync(
             string model,
             global::PredictionGuard.OneOf<string, global::System.Collections.Generic.IList<global::PredictionGuard.CreateResponsesRequestInputVariant2Item>> input,
             string? instructions = default,

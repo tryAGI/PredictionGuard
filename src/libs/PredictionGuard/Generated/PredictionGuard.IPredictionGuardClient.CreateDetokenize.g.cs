@@ -12,7 +12,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::PredictionGuard.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateDetokenizeResponse3> CreateDetokenizeAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateDetokenizeResponse> CreateDetokenizeAsync(
 
             global::PredictionGuard.CreateDetokenizeRequest request,
             global::PredictionGuard.AutoSDKRequestOptions? requestOptions = default,
@@ -25,7 +25,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::PredictionGuard.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateDetokenizeResponse3>> CreateDetokenizeAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateDetokenizeResponse>> CreateDetokenizeAsResponseAsync(
 
             global::PredictionGuard.CreateDetokenizeRequest request,
             global::PredictionGuard.AutoSDKRequestOptions? requestOptions = default,
@@ -43,7 +43,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateDetokenizeResponse3> CreateDetokenizeAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateDetokenizeResponse> CreateDetokenizeAsync(
             string model,
             global::System.Collections.Generic.IList<int> tokens,
             global::PredictionGuard.AutoSDKRequestOptions? requestOptions = default,

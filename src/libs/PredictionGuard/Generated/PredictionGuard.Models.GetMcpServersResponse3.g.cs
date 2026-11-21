@@ -9,16 +9,10 @@ namespace PredictionGuard
     public sealed partial class GetMcpServersResponse3
     {
         /// <summary>
-        /// Type of object (list).
+        /// Description of the error.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("object")]
-        public string? Object { get; set; }
-
-        /// <summary>
-        /// The available MCP servers.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("data")]
-        public global::System.Collections.Generic.IList<global::PredictionGuard.GetMcpServersResponseDataItem>? Data { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
+        public string? Error { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -29,21 +23,16 @@ namespace PredictionGuard
         /// <summary>
         /// Initializes a new instance of the <see cref="GetMcpServersResponse3" /> class.
         /// </summary>
-        /// <param name="object">
-        /// Type of object (list).
-        /// </param>
-        /// <param name="data">
-        /// The available MCP servers.
+        /// <param name="error">
+        /// Description of the error.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetMcpServersResponse3(
-            string? @object,
-            global::System.Collections.Generic.IList<global::PredictionGuard.GetMcpServersResponseDataItem>? data)
+            string? error)
         {
-            this.Object = @object;
-            this.Data = data;
+            this.Error = error;
         }
 
         /// <summary>
