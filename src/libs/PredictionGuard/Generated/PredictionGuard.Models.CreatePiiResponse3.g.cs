@@ -9,28 +9,10 @@ namespace PredictionGuard
     public sealed partial class CreatePiiResponse3
     {
         /// <summary>
-        /// Unique ID for the PII check.
+        /// Description of the error.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
-        public string? Id { get; set; }
-
-        /// <summary>
-        /// Type of object (pii_check).
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("object")]
-        public string? Object { get; set; }
-
-        /// <summary>
-        /// Timestamp of when the PII check was created.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("created")]
-        public int? Created { get; set; }
-
-        /// <summary>
-        /// The set of vectorized data.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("checks")]
-        public global::System.Collections.Generic.IList<global::PredictionGuard.CreatePiiResponseCheck>? Checks { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
+        public string? Error { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -41,31 +23,16 @@ namespace PredictionGuard
         /// <summary>
         /// Initializes a new instance of the <see cref="CreatePiiResponse3" /> class.
         /// </summary>
-        /// <param name="id">
-        /// Unique ID for the PII check.
-        /// </param>
-        /// <param name="object">
-        /// Type of object (pii_check).
-        /// </param>
-        /// <param name="created">
-        /// Timestamp of when the PII check was created.
-        /// </param>
-        /// <param name="checks">
-        /// The set of vectorized data.
+        /// <param name="error">
+        /// Description of the error.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreatePiiResponse3(
-            string? id,
-            string? @object,
-            int? created,
-            global::System.Collections.Generic.IList<global::PredictionGuard.CreatePiiResponseCheck>? checks)
+            string? error)
         {
-            this.Id = id;
-            this.Object = @object;
-            this.Created = created;
-            this.Checks = checks;
+            this.Error = error;
         }
 
         /// <summary>

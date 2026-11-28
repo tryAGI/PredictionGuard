@@ -12,7 +12,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::PredictionGuard.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateChatCompletionsResponse3> CreateChatCompletionsAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateChatCompletionsResponse> CreateChatCompletionsAsync(
 
             global::PredictionGuard.CreateChatCompletionsRequest request,
             global::PredictionGuard.AutoSDKRequestOptions? requestOptions = default,
@@ -25,7 +25,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::PredictionGuard.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateChatCompletionsResponse3>> CreateChatCompletionsAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateChatCompletionsResponse>> CreateChatCompletionsAsResponseAsync(
 
             global::PredictionGuard.CreateChatCompletionsRequest request,
             global::PredictionGuard.AutoSDKRequestOptions? requestOptions = default,
@@ -88,7 +88,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateChatCompletionsResponse3> CreateChatCompletionsAsync(
+        global::System.Threading.Tasks.Task<global::PredictionGuard.CreateChatCompletionsResponse> CreateChatCompletionsAsync(
             string model,
             global::PredictionGuard.OneOf<string, global::System.Collections.Generic.IList<global::PredictionGuard.CreateChatCompletionsRequestMessagesVariant2Item>> messages,
             double? frequencyPenalty = default,

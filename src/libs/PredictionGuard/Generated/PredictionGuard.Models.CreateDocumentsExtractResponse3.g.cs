@@ -9,22 +9,10 @@ namespace PredictionGuard
     public sealed partial class CreateDocumentsExtractResponse3
     {
         /// <summary>
-        /// The parsed document title.
+        /// Description of the error.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
-        public string? Title { get; set; }
-
-        /// <summary>
-        /// The parsed document contents.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("contents")]
-        public string? Contents { get; set; }
-
-        /// <summary>
-        /// The word count for the document.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("count")]
-        public int? Count { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
+        public string? Error { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -35,26 +23,16 @@ namespace PredictionGuard
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateDocumentsExtractResponse3" /> class.
         /// </summary>
-        /// <param name="title">
-        /// The parsed document title.
-        /// </param>
-        /// <param name="contents">
-        /// The parsed document contents.
-        /// </param>
-        /// <param name="count">
-        /// The word count for the document.
+        /// <param name="error">
+        /// Description of the error.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateDocumentsExtractResponse3(
-            string? title,
-            string? contents,
-            int? count)
+            string? error)
         {
-            this.Title = title;
-            this.Contents = contents;
-            this.Count = count;
+            this.Error = error;
         }
 
         /// <summary>

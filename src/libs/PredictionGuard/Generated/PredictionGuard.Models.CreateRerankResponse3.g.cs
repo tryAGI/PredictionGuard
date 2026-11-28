@@ -9,34 +9,10 @@ namespace PredictionGuard
     public sealed partial class CreateRerankResponse3
     {
         /// <summary>
-        /// Unique ID for the rerank response.
+        /// Description of the error.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
-        public string? Id { get; set; }
-
-        /// <summary>
-        /// Type of object (list).
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("object")]
-        public string? Object { get; set; }
-
-        /// <summary>
-        /// Timestamp of when the rerank response was created.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("created")]
-        public int? Created { get; set; }
-
-        /// <summary>
-        /// The rerank model used.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("model")]
-        public string? Model { get; set; }
-
-        /// <summary>
-        /// The set of rankings.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("results")]
-        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateRerankResponseResult>? Results { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
+        public string? Error { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -47,36 +23,16 @@ namespace PredictionGuard
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateRerankResponse3" /> class.
         /// </summary>
-        /// <param name="id">
-        /// Unique ID for the rerank response.
-        /// </param>
-        /// <param name="object">
-        /// Type of object (list).
-        /// </param>
-        /// <param name="created">
-        /// Timestamp of when the rerank response was created.
-        /// </param>
-        /// <param name="model">
-        /// The rerank model used.
-        /// </param>
-        /// <param name="results">
-        /// The set of rankings.
+        /// <param name="error">
+        /// Description of the error.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateRerankResponse3(
-            string? id,
-            string? @object,
-            int? created,
-            string? model,
-            global::System.Collections.Generic.IList<global::PredictionGuard.CreateRerankResponseResult>? results)
+            string? error)
         {
-            this.Id = id;
-            this.Object = @object;
-            this.Created = created;
-            this.Model = model;
-            this.Results = results;
+            this.Error = error;
         }
 
         /// <summary>

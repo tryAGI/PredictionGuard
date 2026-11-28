@@ -49,7 +49,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::PredictionGuard.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::PredictionGuard.CreateResponsesResponse3> CreateResponsesAsync(
+        public async global::System.Threading.Tasks.Task<global::PredictionGuard.CreateResponsesResponse> CreateResponsesAsync(
 
             global::PredictionGuard.CreateResponsesRequest request,
             global::PredictionGuard.AutoSDKRequestOptions? requestOptions = default,
@@ -72,7 +72,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::PredictionGuard.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateResponsesResponse3>> CreateResponsesAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateResponsesResponse>> CreateResponsesAsResponseAsync(
 
             global::PredictionGuard.CreateResponsesRequest request,
             global::PredictionGuard.AutoSDKRequestOptions? requestOptions = default,
@@ -342,19 +342,19 @@ namespace PredictionGuard
                             {
                                 string? __content_403 = null;
                                 global::System.Exception? __exception_403 = null;
-                                global::PredictionGuard.CreateResponsesResponse? __value_403 = null;
+                                global::PredictionGuard.CreateResponsesResponse3? __value_403 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_403 = global::PredictionGuard.CreateResponsesResponse.FromJson(__content_403, JsonSerializerContext);
+                                        __value_403 = __content_403 is not { Length: > 0 } ? null : global::PredictionGuard.CreateResponsesResponse3.FromJson(__content_403, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_403 = global::PredictionGuard.CreateResponsesResponse.FromJson(__content_403, JsonSerializerContext);
+                                        __value_403 = __content_403 is not { Length: > 0 } ? null : global::PredictionGuard.CreateResponsesResponse3.FromJson(__content_403, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -363,9 +363,9 @@ namespace PredictionGuard
                                 }
 
 
-                                throw global::PredictionGuard.ApiException<global::PredictionGuard.CreateResponsesResponse>.Create(
+                                throw global::PredictionGuard.ApiException<global::PredictionGuard.CreateResponsesResponse3>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_403 is { Length: > 0 } ? __content_403 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_403,
                                     responseBody: __content_403,
                                     responseObject: __value_403,
@@ -385,13 +385,13 @@ namespace PredictionGuard
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_400 = global::PredictionGuard.CreateResponsesResponse2.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = __content_400 is not { Length: > 0 } ? null : global::PredictionGuard.CreateResponsesResponse2.FromJson(__content_400, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_400 = global::PredictionGuard.CreateResponsesResponse2.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = __content_400 is not { Length: > 0 } ? null : global::PredictionGuard.CreateResponsesResponse2.FromJson(__content_400, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -402,7 +402,7 @@ namespace PredictionGuard
 
                                 throw global::PredictionGuard.ApiException<global::PredictionGuard.CreateResponsesResponse2>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_400 is { Length: > 0 } ? __content_400 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
                                     responseBody: __content_400,
                                     responseObject: __value_400,
@@ -433,9 +433,9 @@ namespace PredictionGuard
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::PredictionGuard.CreateResponsesResponse3.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::PredictionGuard.CreateResponsesResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateResponsesResponse3>(
+                                    return new global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateResponsesResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::PredictionGuard.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -445,7 +445,7 @@ namespace PredictionGuard
                                 {
                                     throw global::PredictionGuard.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -465,9 +465,9 @@ namespace PredictionGuard
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::PredictionGuard.CreateResponsesResponse3.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::PredictionGuard.CreateResponsesResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateResponsesResponse3>(
+                                    return new global::PredictionGuard.AutoSDKHttpResponse<global::PredictionGuard.CreateResponsesResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::PredictionGuard.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -490,7 +490,7 @@ namespace PredictionGuard
 
                                     throw global::PredictionGuard.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -552,7 +552,7 @@ namespace PredictionGuard
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::PredictionGuard.CreateResponsesResponse3> CreateResponsesAsync(
+        public async global::System.Threading.Tasks.Task<global::PredictionGuard.CreateResponsesResponse> CreateResponsesAsync(
             string model,
             global::PredictionGuard.OneOf<string, global::System.Collections.Generic.IList<global::PredictionGuard.CreateResponsesRequestInputVariant2Item>> input,
             string? instructions = default,

@@ -9,10 +9,34 @@ namespace PredictionGuard
     public sealed partial class CreateEmbeddingsResponse
     {
         /// <summary>
-        /// Description of the error.
+        /// Unique ID for the embeddings.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
-        public string? Error { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// Type of object (list).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("object")]
+        public string? Object { get; set; }
+
+        /// <summary>
+        /// Timestamp of when the embeddings was created.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("created")]
+        public int? Created { get; set; }
+
+        /// <summary>
+        /// The embeddings model used.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("model")]
+        public string? Model { get; set; }
+
+        /// <summary>
+        /// The set of vectorized data.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("data")]
+        public global::System.Collections.Generic.IList<global::PredictionGuard.CreateEmbeddingsResponseDataItem>? Data { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -23,16 +47,36 @@ namespace PredictionGuard
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateEmbeddingsResponse" /> class.
         /// </summary>
-        /// <param name="error">
-        /// Description of the error.
+        /// <param name="id">
+        /// Unique ID for the embeddings.
+        /// </param>
+        /// <param name="object">
+        /// Type of object (list).
+        /// </param>
+        /// <param name="created">
+        /// Timestamp of when the embeddings was created.
+        /// </param>
+        /// <param name="model">
+        /// The embeddings model used.
+        /// </param>
+        /// <param name="data">
+        /// The set of vectorized data.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateEmbeddingsResponse(
-            string? error)
+            string? id,
+            string? @object,
+            int? created,
+            string? model,
+            global::System.Collections.Generic.IList<global::PredictionGuard.CreateEmbeddingsResponseDataItem>? data)
         {
-            this.Error = error;
+            this.Id = id;
+            this.Object = @object;
+            this.Created = created;
+            this.Model = model;
+            this.Data = data;
         }
 
         /// <summary>
