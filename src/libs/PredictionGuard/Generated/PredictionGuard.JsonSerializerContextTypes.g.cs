@@ -290,7 +290,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateAudioTranscriptionsResponse? Type63 { get; set; }
+        public global::PredictionGuard.CreateAudioTranscriptionsResponse3? Type63 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -298,7 +298,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateAudioTranscriptionsResponse3? Type65 { get; set; }
+        public global::PredictionGuard.CreateAudioTranscriptionsResponse? Type65 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -318,7 +318,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateChatCompletionsResponse? Type70 { get; set; }
+        public global::PredictionGuard.CreateChatCompletionsResponse3? Type70 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -326,7 +326,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateChatCompletionsResponse3? Type72 { get; set; }
+        public global::PredictionGuard.CreateChatCompletionsResponse? Type72 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -370,7 +370,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateCompletionsResponse? Type83 { get; set; }
+        public global::PredictionGuard.CreateCompletionsResponse3? Type83 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -378,7 +378,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateCompletionsResponse3? Type85 { get; set; }
+        public global::PredictionGuard.CreateCompletionsResponse? Type85 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -390,7 +390,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateDocumentsExtractResponse? Type88 { get; set; }
+        public global::PredictionGuard.CreateDocumentsExtractResponse3? Type88 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -398,11 +398,11 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateDocumentsExtractResponse3? Type90 { get; set; }
+        public global::PredictionGuard.CreateDocumentsExtractResponse? Type90 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateEmbeddingsResponse? Type91 { get; set; }
+        public global::PredictionGuard.CreateEmbeddingsResponse3? Type91 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -410,7 +410,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateEmbeddingsResponse3? Type93 { get; set; }
+        public global::PredictionGuard.CreateEmbeddingsResponse? Type93 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -426,7 +426,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.GetMcpServersResponse? Type97 { get; set; }
+        public global::PredictionGuard.GetMcpServersResponse3? Type97 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -434,7 +434,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.GetMcpServersResponse3? Type99 { get; set; }
+        public global::PredictionGuard.GetMcpServersResponse? Type99 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -446,7 +446,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.GetMcpToolsResponse? Type102 { get; set; }
+        public global::PredictionGuard.GetMcpToolsResponse3? Type102 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -454,7 +454,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.GetMcpToolsResponse3? Type104 { get; set; }
+        public global::PredictionGuard.GetMcpToolsResponse? Type104 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -470,7 +470,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.GetModelsResponse? Type108 { get; set; }
+        public global::PredictionGuard.GetModelsResponse3? Type108 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -478,7 +478,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.GetModelsResponse3? Type110 { get; set; }
+        public global::PredictionGuard.GetModelsResponse? Type110 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -494,7 +494,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateRerankResponse? Type114 { get; set; }
+        public global::PredictionGuard.CreateRerankResponse3? Type114 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -502,7 +502,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateRerankResponse3? Type116 { get; set; }
+        public global::PredictionGuard.CreateRerankResponse? Type116 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -514,7 +514,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateResponsesResponse? Type119 { get; set; }
+        public global::PredictionGuard.CreateResponsesResponse3? Type119 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -522,7 +522,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateResponsesResponse3? Type121 { get; set; }
+        public global::PredictionGuard.CreateResponsesResponse? Type121 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -538,7 +538,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateInjectionResponse? Type125 { get; set; }
+        public global::PredictionGuard.CreateInjectionResponse3? Type125 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -546,7 +546,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateInjectionResponse3? Type127 { get; set; }
+        public global::PredictionGuard.CreateInjectionResponse? Type127 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -558,7 +558,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreatePiiResponse? Type130 { get; set; }
+        public global::PredictionGuard.CreatePiiResponse3? Type130 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -566,7 +566,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreatePiiResponse3? Type132 { get; set; }
+        public global::PredictionGuard.CreatePiiResponse? Type132 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -586,7 +586,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateToxicityResponse? Type137 { get; set; }
+        public global::PredictionGuard.CreateToxicityResponse3? Type137 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -594,7 +594,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateToxicityResponse3? Type139 { get; set; }
+        public global::PredictionGuard.CreateToxicityResponse? Type139 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -606,7 +606,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateTokenizeResponse? Type142 { get; set; }
+        public global::PredictionGuard.CreateTokenizeResponse3? Type142 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -614,7 +614,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateTokenizeResponse3? Type144 { get; set; }
+        public global::PredictionGuard.CreateTokenizeResponse? Type144 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -626,7 +626,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateDetokenizeResponse? Type147 { get; set; }
+        public global::PredictionGuard.CreateDetokenizeResponse3? Type147 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -634,7 +634,7 @@ namespace PredictionGuard
         /// <summary>
         ///
         /// </summary>
-        public global::PredictionGuard.CreateDetokenizeResponse3? Type149 { get; set; }
+        public global::PredictionGuard.CreateDetokenizeResponse? Type149 { get; set; }
 
         /// <summary>
         ///
